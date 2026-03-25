@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Colorado Democratic State Assembly — Voter Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0a1628;
+  --deep-blue: #132040;
+  --electric-blue: #2563eb;
+  --sky: #38bdf8;
+  --gold: #f59e0b;
+  --red-accent: #ef4444;
+  --green: #22c55e;
+  --white: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --card-bg: #1a2744;
+  --card-border: #243352;
+  --tag-bg: rgba(37, 99, 235, 0.15);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(160deg, #0a1628 0%, #1e3a5f 40%, #2563eb 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: var(--gold);
+  padding: 0.5rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  position: relative;
+  animation: fadeInDown 0.8s ease;
+}
+
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  max-width: 900px;
+  position: relative;
+  animation: fadeInDown 0.8s ease 0.2s both;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, var(--gold), #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--gray-300);
+  max-width: 640px;
+  margin-top: 1.2rem;
+  position: relative;
+  animation: fadeInDown 0.8s ease 0.4s both;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+  animation: fadeInDown 0.8s ease 0.6s both;
+}
+
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--gray-300);
+}
+
+.hero-meta-item strong {
+  color: var(--white);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== NAV ===== */
+.race-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 22, 40, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--card-border);
+  padding: 0 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.race-nav::-webkit-scrollbar { height: 0; }
+
+.race-nav-inner {
+  display: flex;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.race-nav a {
+  display: block;
+  padding: 1rem 1.2rem;
+  color: var(--gray-400);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.race-nav a:hover, .race-nav a.active {
+  color: var(--white);
+  border-bottom-color: var(--electric-blue);
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--electric-blue);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--gray-400);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--card-border), transparent);
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* ===== CANDIDATE CARDS ===== */
+.candidate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 560px) {
+  .candidate-grid { grid-template-columns: 1fr; }
+}
+
+.candidate-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.candidate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--deep-blue);
+  border: 2px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--electric-blue);
+  flex-shrink: 0;
+}
+
+.card-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.card-role {
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  margin-top: 0.2rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.tag-incumbent {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.tag-challenger {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--sky);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.tag-progressive {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--green);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.tag-moderate {
+  background: rgba(148, 163, 184, 0.15);
+  color: var(--gray-300);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.tag-newcomer {
+  background: rgba(168, 85, 247, 0.1);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.tag-veteran {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* ===== PARTY INDICATORS ===== */
+.party-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 2rem 0 1.2rem;
+}
+
+.party-banner.dem {
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: var(--electric-blue);
+}
+
+.party-banner.gop {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #f87171;
+}
+
+.party-banner.ind {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  color: #c084fc;
+}
+
+.candidate-card.gop-card {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.candidate-card.gop-card .card-avatar {
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.tag-gop {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.tag-independent {
+  background: rgba(168, 85, 247, 0.1);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.card-body {
+  padding: 1.2rem 1.5rem;
+}
+
+.card-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+}
+
+.card-section-title:first-child { margin-top: 0; }
+
+.card-text {
+  font-size: 0.88rem;
+  color: var(--gray-200);
+  line-height: 1.65;
+}
+
+.card-text a {
+  color: var(--sky);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--sky);
+}
+
+/* ===== VOTING RECORD BARS ===== */
+.vote-bar-container {
+  margin: 0.6rem 0;
+}
+
+.vote-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--gray-300);
+  margin-bottom: 0.25rem;
+}
+
+.vote-bar {
+  height: 8px;
+  background: var(--deep-blue);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.vote-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 1s ease;
+}
+
+.vote-bar-fill.blue { background: linear-gradient(90deg, var(--electric-blue), var(--sky)); }
+.vote-bar-fill.gold { background: linear-gradient(90deg, #d97706, var(--gold)); }
+.vote-bar-fill.red { background: linear-gradient(90deg, #dc2626, var(--red-accent)); }
+.vote-bar-fill.green { background: linear-gradient(90deg, #16a34a, var(--green)); }
+
+/* ===== PROMISE TRACKER ===== */
+.promise-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  color: var(--gray-200);
+}
+
+.promise-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.promise-kept {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--green);
+}
+
+.promise-broken {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--red-accent);
+}
+
+.promise-partial {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--gold);
+}
+
+.promise-pending {
+  background: rgba(148, 163, 184, 0.15);
+  color: var(--gray-400);
+}
+
+/* ===== FINANCE BOX ===== */
+.finance-box {
+  background: var(--deep-blue);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 0.8rem;
+}
+
+.finance-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  font-size: 0.82rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.finance-row:last-child { border-bottom: none; }
+
+.finance-label { color: var(--gray-400); }
+
+.finance-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  color: var(--white);
+}
+
+/* ===== KEY CONTRAST TABLE ===== */
+.contrast-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.contrast-table th {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-400);
+  border-bottom: 2px solid var(--card-border);
+}
+
+.contrast-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--gray-200);
+  vertical-align: top;
+}
+
+.contrast-table tr:hover td {
+  background: rgba(37, 99, 235, 0.04);
+}
+
+/* ===== ENDORSEMENT PILLS ===== */
+.endorsements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.endorsement {
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--gray-300);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+/* ===== COLLAPSIBLE ===== */
+.collapsible-trigger {
+  width: 100%;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 0.8rem 1.2rem;
+  color: var(--gray-200);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+  transition: background 0.2s;
+}
+
+.collapsible-trigger:hover { background: rgba(37, 99, 235, 0.1); }
+
+.collapsible-trigger .arrow {
+  transition: transform 0.3s;
+  font-size: 0.7rem;
+}
+
+.collapsible-trigger.open .arrow { transform: rotate(180deg); }
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.collapsible-content-inner {
+  padding: 1rem 0;
+}
+
+/* ===== PLACEHOLDER SECTIONS ===== */
+.coming-soon {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--card-bg);
+  border: 1px dashed var(--card-border);
+  border-radius: 16px;
+}
+
+.coming-soon h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.coming-soon p {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--gray-500);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--card-border);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer a { color: var(--gray-400); }
+
+/* ===== COMPARISON BANNER ===== */
+.comparison-banner {
+  background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(245,158,11,0.05));
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.comparison-banner h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.comparison-banner p {
+  color: var(--gray-300);
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero { min-height: 50vh; padding: 3rem 1.2rem; }
+  .section { padding: 3rem 1rem; }
+  .candidate-grid { grid-template-columns: 1fr; }
+  .contrast-table { font-size: 0.78rem; }
+  .contrast-table th, .contrast-table td { padding: 0.6rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-badge">📋 Public Voter Guide</div>
+  <h1>2026 Colorado Democratic<br><span>State Assembly Guide</span></h1>
+  <p class="hero-sub">A comprehensive, source-verified guide to every Democratic race on the ballot at the March 28 State Assembly in Pueblo — candidate records, campaign finance, and broken promises.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">📍 <strong>Memorial Hall, Pueblo</strong></div>
+    <div class="hero-meta-item">📅 <strong>Saturday, March 28, 2026</strong></div>
+    <div class="hero-meta-item">🗳️ <strong>~1,500 delegates</strong></div>
+  </div>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="race-nav">
+  <div class="race-nav-inner">
+    <a href="#senate" class="active">U.S. Senate</a>
+    <a href="#governor">Governor</a>
+    <a href="#ag">Attorney General</a>
+    <a href="#sos">Secretary of State</a>
+    <a href="#treasurer">Treasurer</a>
+    <a href="#cd5">CD-5</a>
+    <a href="#cd1">CD-1</a>
+    <a href="#cd2">CD-2</a>
+    <a href="#cd3">CD-3</a>
+    <a href="#cd4">CD-4</a>
+    <a href="#cd6">CD-6</a>
+    <a href="#cd7">CD-7</a>
+    <a href="#cd8">CD-8</a>
+    <a href="#education">Board of Ed</a>
+    <a href="#regents">Regents</a>
+  </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- ===== U.S. SENATE ===== -->
+<!-- ============================================ -->
+<div id="senate">
+<section class="section">
+  <div class="section-label">🏛️ FEDERAL — U.S. SENATE</div>
+  <h2 class="section-title">U.S. Senate — Colorado</h2>
+  <p class="section-subtitle">Incumbent Sen. John Hickenlooper faces a primary challenge from progressive State Sen. Julie Gonzales. Candidates must win 30% of delegate support at assembly to make the primary ballot.</p>
+
+  <div class="comparison-banner">
+    <h3>⚡ Why This Race Matters</h3>
+    <p>This race is a generational and ideological flashpoint within the Colorado Democratic Party. Hickenlooper, a moderate institutionalist, is challenged by Gonzales, a progressive organizer-turned-legislator who argues the party needs bolder, more confrontational leadership against the Trump administration. Hickenlooper's votes to confirm 10 Trump cabinet nominees — more than any other Democratic senator from a safely blue state — are a central issue.</p>
+  </div>
+
+  <div class="candidate-grid">
+    <!-- HICKENLOOPER -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">JH</div>
+        <div>
+          <div class="card-name">John Hickenlooper</div>
+          <div class="card-role">U.S. Senator (2021–present) · Age 74</div>
+          <div class="card-tags">
+            <span class="tag tag-incumbent">Incumbent</span>
+            <span class="tag tag-moderate">Moderate</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Former geologist turned brewpub founder (Wynkoop Brewing). Denver Mayor (2003–2011), Governor (2011–2019), brief 2020 presidential candidate. Won Senate seat in 2020, defeating Republican Cory Gardner. Has said this will be his final Senate term.</p>
+
+        <div class="card-section-title">Key Senate Record</div>
+        <p class="card-text">Voted to confirm <strong>10 of Trump's cabinet nominees</strong> — the most of any Democratic senator from a state Biden/Harris won by 10+ points. Defended the votes as creating "direct lines" into executive offices to protect Colorado. He was one of 8 Democrats to initially vote against reopening the government, pushing for health insurance tax credit extensions.</p>
+
+        <div class="card-section-title">Voting Alignment</div>
+        <div class="vote-bar-container">
+          <div class="vote-bar-label">
+            <span>Votes with GOP (~25% in 2025)</span>
+            <span>25%</span>
+          </div>
+          <div class="vote-bar">
+            <div class="vote-bar-fill red" style="width: 25%"></div>
+          </div>
+        </div>
+        <div class="vote-bar-container">
+          <div class="vote-bar-label">
+            <span>Attendance Rate (97.9%)</span>
+            <span>97.9%</span>
+          </div>
+          <div class="vote-bar">
+            <div class="vote-bar-fill blue" style="width: 97.9%"></div>
+          </div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: Colorado Newsline analysis (April 2025), GovTrack.us. Hickenlooper was identified as the Democratic caucus' "number one outlier," voting with Trump and GOP colleagues roughly 25% of the time while representing a state Harris won by 11 points.</p>
+
+        <div class="card-section-title">Campaign Promises vs. Record</div>
+        <div class="promise-item">
+          <div class="promise-icon promise-partial">~</div>
+          <div><strong>Universal healthcare:</strong> 2020 campaign supported a "public option." In office, endorsed a public option but has not co-sponsored Medicare for All. His campaign says he supports universal healthcare; policy experts debate whether a public option qualifies.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Climate action:</strong> Co-sponsored bipartisan energy legislation; helped pass IRA climate provisions. Protected tens of thousands of acres of Colorado public lands.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-broken">✗</div>
+          <div><strong>"Stand up to Trump":</strong> 2020 campaign centered on defeating Trumpism. In 2025, voted to confirm 10 Trump nominees — more than nearly any other safe-blue-state Democrat. Critics argue this contradicts the core promise of his initial campaign.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-partial">~</div>
+          <div><strong>Bipartisan immigration reform:</strong> Supported bipartisan border security negotiations, but comprehensive reform remains stalled.</div>
+        </div>
+
+        <div class="card-section-title">Campaign Finance (FEC)</div>
+        <div class="finance-box">
+          <div class="finance-row">
+            <span class="finance-label">Total Raised (2025)</span>
+            <span class="finance-value">$5.4M+</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Cash on Hand (Jan 2026)</span>
+            <span class="finance-value">$3.8M</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Fundraising Advantage</span>
+            <span class="finance-value">~20:1 vs. Gonzales</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Petition Signatures Submitted</span>
+            <span class="finance-value">17,700+ (12K required)</span>
+          </div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: FEC filings, Colorado Newsline (Feb 2026), Colorado Politics (Feb 2026).</p>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">314 Action</span>
+          <span class="endorsement">AIPAC</span>
+          <span class="endorsement">Brady Campaign</span>
+          <span class="endorsement">End Citizens United</span>
+          <span class="endorsement">Giffords</span>
+          <span class="endorsement">J Street PAC</span>
+          <span class="endorsement">LCV Action Fund</span>
+          <span class="endorsement">NRDC</span>
+          <span class="endorsement">Planned Parenthood</span>
+          <span class="endorsement">Population Connection</span>
+        </div>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>PACT Act (2022):</strong> Voted YES on the Honoring Our PACT Act, expanding VA healthcare for 3.5M+ veterans exposed to burn pits and toxic substances. Co-sponsored the RECA Extension Act compensating workers exposed to nuclear radiation.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Space Command HQ:</strong> Led bipartisan fight to keep U.S. Space Command in Colorado Springs. Successfully lobbied Biden administration to reverse Trump's politically-motivated move to Alabama (2023). Trump re-announced relocation to Alabama in Sept 2025; Hickenlooper called it "an abuse of power" and vowed to fight.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>VA Funding:</strong> Voted for FY2022 appropriations securing $100B for VA medical care modernization. Colorado has 400,000+ veterans and six active military bases.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Major Richard Star Act:</strong> Co-sponsors legislation ensuring combat-disabled veterans with fewer than 20 years of service receive full concurrent retirement and disability pay.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Veteran Suicide Prevention:</strong> Co-sponsored the VA Zero Suicide Demonstration Project Act to improve mental health access for rural veterans.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-partial">~</div>
+          <div><strong>DOD Spending:</strong> Generally supports robust defense budgets. Voted for NDAA authorizations. Does not advocate significant DOD cuts.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-pending">?</div>
+          <div><strong>Military Deployment on Domestic Soil:</strong> Has not publicly addressed Trump-era proposals for domestic military deployment for immigration enforcement.</div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: hickenlooper.senate.gov, GovTrack.us, FEC filings, CPR News (Sept 2025).</p>
+      </div>
+    </div>
+
+    <!-- GONZALES -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">JG</div>
+        <div>
+          <div class="card-name">Julie Gonzales</div>
+          <div class="card-role">State Senator, SD-34 (2019–present) · Age 42</div>
+          <div class="card-tags">
+            <span class="tag tag-challenger">Challenger</span>
+            <span class="tag tag-progressive">Progressive</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Born on the San Carlos Apache reservation in Arizona; raised in South Texas. Yale University graduate (History & Ethnicity, Race, and Migration, 2005). Moved to Denver; became a community organizer working on tenant and immigrant rights. JD from University of Denver Sturm College of Law. Elected to Colorado Senate in 2018 representing central Denver. Serves as Senate Majority Whip and chairs the Judiciary Committee and Committee on Legal Services — one of only 3 senators to chair multiple committees.</p>
+
+        <div class="card-section-title">Legislative Record</div>
+        <p class="card-text">Since 2018, Gonzales has been the prime sponsor of significant legislation across multiple issue areas:</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>SB 20-100:</strong> Repealed Colorado's death penalty (signed into law 2020)</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Reproductive Health Equity Act (2022):</strong> Codified abortion access into Colorado statute after Dobbs</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Colorado Voting Rights Act:</strong> Put voter intimidation and suppression protections into state law</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>SB 25-276:</strong> Limited Colorado cooperation with federal immigration enforcement; barred ICE operations in schools, hospitals, and houses of worship</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Housing:</strong> Secured over $500M for affordable housing; sponsored rent-setting algorithm restrictions</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Worker Protection Act (2026):</strong> Sponsored and rallied for expanded worker rights</div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: Colorado General Assembly records, Wikipedia, CPR News (Dec 2025), julieforcolorado.com.</p>
+
+        <div class="card-section-title">Policy Positions</div>
+        <p class="card-text">Medicare for All · Universal child care · Higher federal minimum wage · Ban on congressional stock trading · Abolish ICE · Protect abortion rights & gender-affirming care · Palestinian self-determination · No corporate PAC money</p>
+
+        <div class="card-section-title">Campaign Finance (FEC)</div>
+        <div class="finance-box">
+          <div class="finance-row">
+            <span class="finance-label">Raised (Dec 8–31, 2025)</span>
+            <span class="finance-value">$178,843</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Strategy</span>
+            <span class="finance-value">Assembly route (no petition)</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Corporate PAC $</span>
+            <span class="finance-value">$0 (refused)</span>
+          </div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: FEC filings, Colorado Newsline (Feb 2026). Gonzales: "I'm not going to out-fundraise a multimillionaire incumbent backed by the political establishment."</p>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">Colorado Working Families Party</span>
+          <span class="endorsement">Indivisible Colorado</span>
+          <span class="endorsement">Sunrise Movement Denver</span>
+          <span class="endorsement">Track AIPAC</span>
+        </div>
+
+        <div class="card-section-title">Polling</div>
+        <p class="card-text">A Feb 2026 Data for Progress poll (739 likely Dem primary voters) found Hickenlooper leading initial ballot 38%–35% with 24% undecided. After voters read positive and negative arguments about both candidates, Gonzales moved into a 7-point lead (40%–33%) — outside the margin of error.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400)">Source: Data for Progress / Working Families Party poll, Feb 2026.</p>
+
+        <div class="card-section-title">Context & Controversy</div>
+        <p class="card-text">In December 2025, the Colorado Democratic Party reportedly told several Gonzales campaign workers they would be "blacklisted" from future Democratic work if they challenged Hickenlooper. The party later distanced itself from these threats. Gonzales was a member of DSA from 2018–2024 but identifies as "a Democrat." If elected, she would be the first woman and first Latina elected to the U.S. Senate from Colorado.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-pending">?</div>
+          <div><strong>Space Command HQ:</strong> No specific public statement found on Space Command basing. As a Denver-based state senator, this has not been a focus area. Would need to take a position in a federal race.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>SB 25-276 (Immigration):</strong> Prime sponsor of legislation barring ICE operations in schools, hospitals, and houses of worship. Critics in the military community argue this limits federal enforcement cooperation; supporters say it protects immigrant military families from deportation fear.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-pending">?</div>
+          <div><strong>VA Healthcare:</strong> No state-level votes on VA policy (federal jurisdiction). Campaign platform includes Medicare for All, which would affect VA-enrolled veterans. Has not released a specific veterans policy platform.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-pending">?</div>
+          <div><strong>DOD Spending:</strong> Progressive coalition allies generally favor reduced Pentagon spending and reallocation to domestic programs. Gonzales has not taken a specific public position on defense budgets.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-broken">✗</div>
+          <div><strong>Abolish ICE:</strong> Supports abolishing ICE — a position that intersects with military/immigration policy. Would oppose using military personnel for domestic immigration enforcement.</div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado General Assembly records, julieforcolorado.com, CPR News. Note: Gonzales's federal military/veterans platform is still developing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- OTHER SENATE CANDIDATES -->
+  <button class="collapsible-trigger" onclick="toggleCollapsible(this)">
+    Other Democratic Senate Candidates (Breslin, Hasley, Zimpfer) <span class="arrow">▼</span>
+  </button>
+  <div class="collapsible-content">
+    <div class="collapsible-content-inner">
+      <p class="card-text"><strong>Karen Breslin</strong> — College professor and 2022 Senate candidate. First Democrat to file against Hickenlooper. Raised ~$130K in 2025 but finished with only $7,284 cash on hand as of Jan 2026. Focused on campaign finance reform and progressive economic policy.</p>
+      <p class="card-text" style="margin-top:0.8rem"><strong>Brashad Hasley</strong> — Software engineer. Platforms include Medicare for All, AI guardrails to protect jobs and privacy, and piloting a 32-hour workweek with no pay cuts. Completed Ballotpedia's Candidate Connection survey.</p>
+      <p class="card-text" style="margin-top:0.8rem"><strong>A.J. Zimpfer</strong> — Accountant. Limited public profile and fundraising. Focused on fiscal accountability.</p>
+      <p class="card-text" style="margin-top:1rem; font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em;">🎖️ Veterans & Military — Minor Senate Candidates</p>
+      <p class="card-text" style="margin-top:0.3rem">None of the minor Democratic Senate candidates (Breslin, Hasley, Zimpfer) have publicly released veterans or military policy platforms. No military service records confirmed. Hasley's platform includes AI guardrails that could affect defense-sector AI deployment.</p>
+      <p class="card-text" style="margin-top:0.8rem; font-size:0.78rem; color: var(--gray-400)">Source: FEC filings, Ballotpedia, Colorado Newsline (Feb 2026).</p>
+    </div>
+  </div>
+
+  <!-- KEY CONTRASTS TABLE -->
+  <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 0.5rem;">At a Glance: Hickenlooper vs. Gonzales</h3>
+  <div style="overflow-x: auto;">
+  <table class="contrast-table">
+    <thead>
+      <tr>
+        <th>Issue</th>
+        <th>Hickenlooper</th>
+        <th>Gonzales</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Healthcare</strong></td>
+        <td>Public option ("universal" per campaign)</td>
+        <td>Medicare for All; single-payer</td>
+      </tr>
+      <tr>
+        <td><strong>Trump Nominees</strong></td>
+        <td>Voted to confirm 10; says it "reduced the damage" by building relationships</td>
+        <td>Called votes "disqualifying"; advocates blanket opposition</td>
+      </tr>
+      <tr>
+        <td><strong>Immigration</strong></td>
+        <td>Bipartisan border security approach</td>
+        <td>Abolish ICE; expand sanctuary protections</td>
+      </tr>
+      <tr>
+        <td><strong>Corporate PACs</strong></td>
+        <td>Accepts PAC and institutional money</td>
+        <td>Refuses all corporate PAC money</td>
+      </tr>
+      <tr>
+        <td><strong>Approach</strong></td>
+        <td>"Work across the aisle" moderate institutionalism</td>
+        <td>"Bold, unapologetic" progressive confrontation</td>
+      </tr>
+      <tr>
+        <td><strong>Fundraising</strong></td>
+        <td>$3.8M cash on hand</td>
+        <td>~$179K raised (late Dec start)</td>
+      </tr>
+      <tr>
+        <td><strong>Assembly Path</strong></td>
+        <td>Petition-qualified (17,700 sigs); may also seek assembly</td>
+        <td>Assembly-only route; needs 30% delegate support</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- GOP SENATE -->
+  <div class="party-banner gop">🐘 REPUBLICAN PRIMARY CANDIDATES — U.S. SENATE</div>
+  <p class="card-text" style="margin-bottom: 1rem;">Six Republicans are running. Colorado hasn't elected a Republican statewide since 2016. The seat is rated "Solid Democrat" by national forecasters.</p>
+  <div class="candidate-grid">
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">JJ</div>
+        <div>
+          <div class="card-name">Janak Joshi</div>
+          <div class="card-role">Fmr. State Rep (2011–2017) · R-Colorado Springs</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Leading Republican fundraiser for this race. Former state representative from HD-16 in Colorado Springs. Also ran for CD-8 in 2024. Physician by profession.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None confirmed. Physician.</p>
+        <p class="card-text">Former state representative from Colorado Springs (HD-16, 2011–2017). As a physician, healthcare access for veterans would be relevant. Based in Colorado Springs near military installations. No specific veterans platform publicly available.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Ballotpedia.</p>
+      </div>
+    </div>
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">GM</div>
+        <div>
+          <div class="card-name">George Markert</div>
+          <div class="card-role">Retired Marine Corps Colonel · First-time candidate</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span><span class="tag tag-veteran">Marine Veteran</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Retired Marine Corps veteran making his first run for office. Combined fundraising with Joshi totals ~$267K — less than one-tenth of Hickenlooper's war chest.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: Retired U.S. Marine Corps Colonel. Career military officer.</p>
+        <p class="card-text">Highest-ranking military veteran among all 2026 Senate candidates (any party). As a retired Marine Colonel, Markert brings direct military leadership experience. First-time candidate; specific veterans policy positions not yet detailed. Combined fundraising with Joshi totals ~$267K — significantly less than Hickenlooper's war chest.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Ballotpedia, Colorado Newsline.</p>
+      </div>
+    </div>
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">MB</div>
+        <div>
+          <div class="card-name">Mark Baisley</div>
+          <div class="card-role">State Senator, SD-4 · R-Woodland Park</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">State Senator since 2023. Technology background. Also explored a governor's race before switching to Senate. Campaign platform: "Making Colorado Great Again." Raised ~$13K with ~$3,500 on hand.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None confirmed.</p>
+        <p class="card-text">State Senator from Woodland Park (SD-4). "Making Colorado Great Again" campaign aligns with Trump on defense and military issues. Represents a district near Fort Carson and other military installations. Specific veterans platform not detailed.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Ballotpedia, Colorado General Assembly.</p>
+      </div>
+    </div>
+  </div>
+  <button class="collapsible-trigger" onclick="toggleCollapsible(this)">
+    Other GOP & Independent Senate Candidates <span class="arrow">▼</span>
+  </button>
+  <div class="collapsible-content">
+    <div class="collapsible-content-inner">
+      <p class="card-text"><strong>Amanda Calderon (R)</strong> — Business owner. Circulating petitions.</p>
+      <p class="card-text" style="margin-top:0.5rem"><strong>Dathan Jones (R)</strong> — First-time candidate. Circulating petitions.</p>
+      <p class="card-text" style="margin-top:0.5rem"><strong>Sean Pond (R)</strong> — Montrose County Commissioner. Circulating petitions.</p>
+      <p class="card-text" style="margin-top:0.8rem"><strong>Independents/Third Party (General Election):</strong> Clinton Dale, Joshua Kuebler, Robert Wolfe, Matthew Wood.</p>
+      <p class="card-text" style="margin-top:0.8rem; font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em;">🎖️ Veterans & Military Note</p>
+      <p class="card-text" style="margin-top:0.3rem">No military service records or specific veterans policy platforms confirmed for these candidates.</p>
+    </div>
+  </div>
+<!-- ============================================ -->
+<div id="governor">
+<section class="section">
+  <div class="section-label">🏛️ STATEWIDE — GOVERNOR</div>
+  <h2 class="section-title">Governor of Colorado</h2>
+  <p class="section-subtitle">Gov. Jared Polis is term-limited. The Democratic primary is a two-person race between U.S. Senator Michael Bennet and Attorney General Phil Weiser. Republicans haven't won a gubernatorial election in Colorado since 2002.</p>
+
+  <div class="comparison-banner">
+    <h3>⚡ Why This Race Matters</h3>
+    <p>Colorado faces a budget crisis from the federal "One Big Beautiful Bill" that slashed state funding, a housing affordability emergency, and ongoing clashes with the Trump administration. Both candidates are term-limited or departing their current offices. The central debate: Who is better positioned to fight Trump — a 16-year Senate veteran who wants to lead from the state level, or the state's chief lawyer who has already filed dozens of lawsuits against the administration?</p>
+  </div>
+
+  <div class="candidate-grid">
+    <!-- BENNET -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">MB</div>
+        <div>
+          <div class="card-name">Michael Bennet</div>
+          <div class="card-role">U.S. Senator (2009–present) · Age 61</div>
+          <div class="card-tags">
+            <span class="tag tag-moderate">Establishment Favorite</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Son of diplomat Douglas Bennet. Yale Law School grad. Former law clerk, DOJ counsel under Clinton, managing director at Anschutz Investment Company. Chief of Staff to Denver Mayor Hickenlooper (2003–2005). Superintendent of Denver Public Schools (2005–2009). Appointed to Senate in 2009 when Ken Salazar became Interior Secretary; elected 2010, 2016, 2022. Brief 2020 presidential run. Announced governor campaign April 11, 2025. Would resign Senate seat if elected and appoint his own successor.</p>
+
+        <div class="card-section-title">Key Senate Record</div>
+        <p class="card-text">16 years in the Senate. Introduced 120+ bills. Served on Finance, Intelligence, Rules, and Agriculture committees. Led on child tax credit expansion and bipartisan immigration reform (which ultimately stalled). Like Hickenlooper, voted with Republicans about 25% of the time in 2025 — drew activist criticism for confirming some Trump nominees while representing a safe blue state. Has defended his approach as "strategic" rather than "futile" blanket opposition.</p>
+
+        <div class="card-section-title">Voting Alignment</div>
+        <div class="vote-bar-container">
+          <div class="vote-bar-label">
+            <span>Votes with GOP (~25% in 2025)</span>
+            <span>~25%</span>
+          </div>
+          <div class="vote-bar">
+            <div class="vote-bar-fill red" style="width: 25%"></div>
+          </div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: Colorado Newsline (April 2025). Both Colorado senators voted with Trump about a quarter of the time, the biggest pro-Trump skew relative to their state's partisanship in the entire Democratic caucus.</p>
+
+        <div class="card-section-title">Campaign Promises (2026 Governor)</div>
+        <p class="card-text">Housing affordability as top priority · Fight Trump administration cuts to Medicaid and federal programs from the state level · Make Colorado "the best state to live, work, and raise a family" · Education reform (leveraging DPS superintendent background) · Climate and public lands protection</p>
+
+        <div class="card-section-title">Campaign Finance</div>
+        <div class="finance-box">
+          <div class="finance-row">
+            <span class="finance-label">Fundraising Lead</span>
+            <span class="finance-value">Significant (exact $ TBD)</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Super PAC Support</span>
+            <span class="finance-value">$3.5M+ (incl. $750K Bloomberg)</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Polling (June 2025)</span>
+            <span class="finance-value">53% vs. Weiser 22% (25% undecided)</span>
+          </div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: Colorado Politics (Oct 2025), PostIndependent poll (June 2025).</p>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">Sen. John Hickenlooper</span>
+          <span class="endorsement">Rep. Joe Neguse</span>
+          <span class="endorsement">Rep. Jason Crow</span>
+          <span class="endorsement">Mayor Mike Johnston (Denver)</span>
+          <span class="endorsement">Senate Pres. James Coleman</span>
+          <span class="endorsement">House Speaker Julie McCluskie</span>
+          <span class="endorsement">Fmr. Mayor Wellington Webb</span>
+          <span class="endorsement">Fmr. Mayor Michael Hancock</span>
+        </div>
+
+        <div class="card-section-title">Key Criticism</div>
+        <p class="card-text">Weiser argues Bennet is abandoning his Senate post mid-term during a critical period. Activists note his Trump-nominee votes. His 2020 presidential campaign failed to gain traction. If elected, his successor in the Senate would be appointed rather than elected — raising democratic accountability concerns. Over 50% of early fundraising came from super PACs including billionaire Michael Bloomberg.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None (son of diplomat Douglas Bennet).</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>PACT Act (2022):</strong> Voted YES. Jointly with Hickenlooper, celebrated 20,000+ Colorado PACT Act claims approved. Serves on the Senate Intelligence Committee overseeing defense/intel matters.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Space Command HQ:</strong> Co-led the multi-year bipartisan campaign to keep Space Command in Colorado Springs. Called Trump's Sept 2025 re-relocation decision "a blatantly political decision" and "an abuse of power." Personally lobbied Presidents Biden and Trump; organized the full Colorado delegation.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>NDAA Support:</strong> Voted for annual National Defense Authorization Acts. Supported Fort Carson and Colorado military installations through appropriations process.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>GI Bill &amp; Military Families:</strong> Supported expanded child tax credit benefiting military families. Advocated for military spouse employment and childcare provisions in defense bills.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-partial">~</div>
+          <div><strong>Immigration &amp; Military:</strong> Supported bipartisan border security negotiations but comprehensive reform stalled. Has not taken a position on using active-duty military for domestic immigration enforcement.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-pending">?</div>
+          <div><strong>Governor Platform:</strong> As governor candidate, has emphasized protecting Colorado from Trump-era federal cuts. Space Command defense would continue from the governor's office. Specific veterans policy platform as governor not yet detailed.</div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: bennet.senate.gov, CPR News (Sept 2025, Jan 2024), Colorado Newsline.</p>
+      </div>
+    </div>
+
+    <!-- WEISER -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">PW</div>
+        <div>
+          <div class="card-name">Phil Weiser</div>
+          <div class="card-role">Attorney General (2019–present) · Term-limited</div>
+          <div class="card-tags">
+            <span class="tag tag-progressive">Fighter Brand</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Former antitrust lawyer at DOJ. Dean of University of Colorado Law School. First elected AG in 2018, breaking a 14-year Republican streak; re-elected 2022. First major Democrat to enter the governor's race (January 2025). Term-limited in 2026. First elected office was AG — no prior campaigns.</p>
+
+        <div class="card-section-title">Record as Attorney General</div>
+        <p class="card-text">Weiser's signature accomplishments as AG center on using legal authority to protect Colorado:</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Anti-Trump lawsuits:</strong> Filed 12+ lawsuits challenging Trump administration policies; recovered nearly $1B in federal funds for Colorado</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Kroger-Albertsons:</strong> Led major state antitrust lawsuit to block grocery merger</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>RealPage:</strong> Joined federal lawsuit alleging rent-setting software facilitated illegal price-fixing</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Consumer protection:</strong> Consistent enforcement across consumer, antitrust, and environmental arenas</div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: Colorado Newsline (Jan 2025), Colorado Politics (Feb 2026). Note: Bennet's campaign has pointed out Weiser "added his name" to most lawsuits rather than leading them; Weiser counters with $1B recovered.</p>
+
+        <div class="card-section-title">Campaign Message</div>
+        <p class="card-text">"The People's Lawyer" — positioning himself as a proven fighter who has directly taken on Trump from Colorado, rather than from within a dysfunctional Washington. Emphasizes on-the-ground state experience vs. Bennet's federal focus. "While Senator Bennet has been in Washington, I have served Colorado."</p>
+
+        <div class="card-section-title">Assembly Strategy</div>
+        <p class="card-text">Weiser is going exclusively through the caucus and assembly process — not petitioning. His campaign has actively urged supporters to caucus and serve as delegates, framing this as a grassroots vs. establishment test.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400)">Source: philforcolorado.com/caucus.</p>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">Fmr. Gov. Roy Romer (co-chair)</span>
+          <span class="endorsement">Fmr. First Lady Dottie Lamm</span>
+        </div>
+
+        <div class="card-section-title">Key Criticism</div>
+        <p class="card-text">Limited courtroom experience before becoming AG (was a law school dean). Bennet allies argue Weiser has ridden other people's lawsuits rather than initiating them. Significantly behind in polls and fundraising. Lower name recognition statewide compared to a three-term senator.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>AG Lawsuits Protecting Military Families:</strong> Filed 12+ lawsuits against the Trump administration, some of which protected military-connected Coloradans from federal funding cuts to healthcare and education programs used by veteran families.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-pending">?</div>
+          <div><strong>Space Command:</strong> Supported the delegation's effort to keep Space Command in Colorado as AG. Specific governor-level plans for Space Command advocacy not yet detailed.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-pending">?</div>
+          <div><strong>Veterans Policy:</strong> No specific veterans policy platform released. Campaign focuses on housing, consumer protection, and fighting Trump — all of which intersect with military family concerns in El Paso County.</div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: philforcolorado.com, Colorado AG press releases.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- OTHER GOV CANDIDATES -->
+  <button class="collapsible-trigger" onclick="toggleCollapsible(this)">
+    Other Democratic Governor Candidates (Hughes, Moses, Underwood) <span class="arrow">▼</span>
+  </button>
+  <div class="collapsible-content">
+    <div class="collapsible-content-inner">
+      <p class="card-text"><strong>David Hughes</strong> — Limited public profile. Filed as a candidate for the Democratic primary.</p>
+      <p class="card-text" style="margin-top:0.8rem"><strong>William Moses</strong> — Former county prosecutor and Baptist deacon from Pueblo. Master's from Webster University (Public Administration). Emphasizes civil rights activism background and community service. Extensive law enforcement ties; Honorary Member of County Sheriffs of Colorado.</p>
+      <p class="card-text" style="margin-top:0.8rem"><strong>Erik Underwood</strong> — Limited public profile. Filed as a candidate.</p>
+      <p class="card-text" style="margin-top:0.8rem; font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em;">🎖️ Veterans & Military — Minor Governor Candidates</p>
+      <p class="card-text" style="margin-top:0.3rem"><strong>William Moses:</strong> Former county prosecutor from Pueblo. Honorary Member of County Sheriffs of Colorado and extensive law enforcement ties — may intersect with military/veteran community. Master's from Webster University (which has a strong military campus program). No specific veterans platform. Hughes and Underwood have limited public profiles with no veterans positions available.</p>
+      <p class="card-text" style="margin-top:0.8rem; font-size:0.78rem; color: var(--gray-400)">Source: Ballotpedia Candidate Connection surveys.</p>
+    </div>
+  </div>
+
+  <!-- CONTRAST TABLE -->
+  <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 0.5rem;">At a Glance: Bennet vs. Weiser</h3>
+  <div style="overflow-x: auto;">
+  <table class="contrast-table">
+    <thead>
+      <tr>
+        <th>Issue</th>
+        <th>Bennet</th>
+        <th>Weiser</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Anti-Trump Strategy</strong></td>
+        <td>Strategic engagement; "pick your battles" in the Senate</td>
+        <td>Legal warfare; 12+ lawsuits; $1B recovered for CO</td>
+      </tr>
+      <tr>
+        <td><strong>Housing</strong></td>
+        <td>Central campaign issue; federal legislative experience</td>
+        <td>RealPage rent-fixing lawsuit; consumer protection focus</td>
+      </tr>
+      <tr>
+        <td><strong>Experience</strong></td>
+        <td>16 years in Senate, DPS Superintendent, Hickenlooper CoS</td>
+        <td>8 years as AG, CU Law Dean, DOJ antitrust</td>
+      </tr>
+      <tr>
+        <td><strong>Senate Seat</strong></td>
+        <td>Would appoint his own successor (no election)</td>
+        <td>Not applicable (AG term-limited)</td>
+      </tr>
+      <tr>
+        <td><strong>Establishment Support</strong></td>
+        <td>Hickenlooper, Neguse, Crow, Denver mayors, legislative leaders</td>
+        <td>Romer, Lamm; grassroots/assembly-focused</td>
+      </tr>
+      <tr>
+        <td><strong>Fundraising</strong></td>
+        <td>Large lead; $3.5M+ Super PAC support</td>
+        <td>Behind; assembly-route emphasis</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- GOP GOVERNOR -->
+  <div class="party-banner gop">🐘 REPUBLICAN PRIMARY CANDIDATES — GOVERNOR (21+ candidates)</div>
+  <p class="card-text" style="margin-bottom: 1rem;">A massive, crowded GOP field with no clear frontrunner. Republicans haven't won a Colorado governor's race since 2002. Top-tier candidates are circulating petitions and going through assembly. Key themes: anti-one-party-rule, Tina Peters pardon, immigration enforcement, spending cuts.</p>
+  <div class="candidate-grid">
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">BK</div>
+        <div>
+          <div class="card-name">Barbara Kirkmeyer</div>
+          <div class="card-role">State Senator, SD-23 · Fmr. Weld County Commissioner</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span><span class="tag tag-incumbent">Fundraising Leader</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Brighton. Nearly 2 decades as Weld County Commissioner. On the legislature's Joint Budget Committee. 2022 CD-8 nominee. Endorsed by fmr. Gov. Bill Owens and Rep. Gabe Evans. Leading fundraiser ($55K+, 1/3 of all GOP money). Supports 10% across-the-board spending cuts, undoing sanctuary policies, and TABOR defense. Known for anti-abortion stances and support of 2013 secession effort. Loyal to Trump.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Newsline (Sept 2025), Westword (Jan 2026).</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None confirmed.</p>
+        <p class="card-text">State Senator, Joint Budget Committee member — involved in state budget decisions affecting veteran services. Nearly two decades as Weld County Commissioner near Buckley SFB. 2022 CD-8 nominee. Supports undoing sanctuary policies, which intersects with military/ICE cooperation debate. Supports 10% across-the-board spending cuts, which could affect state veteran services. Loyal to Trump on defense issues.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Newsline, Westword.</p>
+      </div>
+    </div>
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">SB</div>
+        <div>
+          <div class="card-name">Scott Bottoms</div>
+          <div class="card-role">State Rep · R-Colorado Springs · Pastor</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Colorado Springs pastor. First major R candidate to enter (Jan 2025). Known for anti-LGBTQ rhetoric in the statehouse, fighting gay marriage, disparaging remarks about transgender individuals. Won a straw poll at a Northern Colorado forum. Raised ~$38K. Focus: public safety, fiscal responsibility.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None confirmed.</p>
+        <p class="card-text">Colorado Springs-based state representative and pastor. Represents a military-heavy community. Focus on public safety and fiscal responsibility. No specific veterans policy platform publicly available.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Ballotpedia.</p>
+      </div>
+    </div>
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">JM</div>
+        <div>
+          <div class="card-name">Jason Mikesell</div>
+          <div class="card-role">Teller County Sheriff</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Background in training special forces. Fought 7-year ACLU lawsuit over ICE cooperation — court ruled some of his actions were allowed, others were not. Wants to undo sanctuary policies and put "law enforcement first." Said he doesn't need the National Guard to address crime. Emphasizes housing, education, public safety.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: Background in training special forces (not confirmed as active-duty service member).</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-partial">~</div>
+          <div><strong>287(g) Agreement / ICE Cooperation:</strong> As Teller County Sheriff, Mikesell signed a 287(g) agreement allowing deputies to cooperate with ICE on immigration enforcement. Fought a 7-year ACLU lawsuit — court ruled some of his actions were allowed, others were not. This is directly relevant to the military/immigration enforcement debate.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-pending">?</div>
+          <div><strong>Military Deployment on Domestic Soil:</strong> Said he "doesn't need the National Guard to address crime" — suggesting he would rely on law enforcement rather than military deployment for domestic security, though he supports aggressive federal immigration enforcement.</div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Newsline, ACLU of Colorado.</p>
+      </div>
+    </div>
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">VM</div>
+        <div>
+          <div class="card-name">Victor Marx</div>
+          <div class="card-role">Ministry Leader · Marine Veteran · Colorado Springs</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span><span class="tag tag-veteran">Marine Veteran</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Founder of All Things Possible Ministries; 2M+ social media followers. Marine veteran. Claims to have rescued 45,000+ women and children from danger worldwide. Endorsed by Rep. Lauren Boebert. Platform: "lead with courage, protect families, restore values." Circulating petitions.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: U.S. Marine Corps veteran. Colorado Springs.</p>
+        <p class="card-text">Marine veteran and founder of All Things Possible Ministries. Claims to have rescued 45,000+ women and children from danger worldwide through his ministry. Endorsed by Rep. Lauren Boebert. Military service is central to his campaign identity. Platform emphasizes "leading with courage" and protecting families. Specific VA/veterans policy positions not detailed beyond general pro-military rhetoric. Colorado Springs base gives him connection to the military community.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Campaign website, Ballotpedia.</p>
+      </div>
+    </div>
+  </div>
+  <button class="collapsible-trigger" onclick="toggleCollapsible(this)">
+    Other GOP Governor Candidates (Oltmann, Lopez, Baisley, Griffin, others) <span class="arrow">▼</span>
+  </button>
+  <div class="collapsible-content">
+    <div class="collapsible-content-inner">
+      <p class="card-text"><strong>Joe Oltmann (R)</strong> — Right-wing podcaster. Known for peddling debunked election conspiracies and calling for execution of Colorado politicians. Campaign built on freeing Tina Peters from prison. Assembly route.</p>
+      <p class="card-text" style="margin-top:0.5rem"><strong>Greg Lopez (R→Independent)</strong> — Former U.S. Rep from CD-4 (2024–2025). 3rd gubernatorial run (ran as R in 2018 and 2022). Air Force veteran. Now running as Independent. Raised ~$23K.</p>
+      <p class="card-text" style="margin-top:0.5rem"><strong>Joshua Griffin (R)</strong> — R&D firm founder. 2024 congressional candidate. Circulating petitions. Would consider commuting Tina Peters' sentence.</p>
+      <p class="card-text" style="margin-top:0.5rem"><strong>Will McBride (R)</strong> — Attorney. Wants to eliminate state income tax, cut "bloated bureaucracy."</p>
+      <p class="card-text" style="margin-top:0.5rem"><strong>Mark Baisley (R)</strong> — State Senator SD-4, Woodland Park. Tech background. "Making Colorado Great Again." Raised ~$13K. (Also explored Senate race.)</p>
+      <p class="card-text" style="margin-top:0.5rem"><strong>Other declared:</strong> Bob Brinkerhoff, Jason Clark, Jon Gray-Ginsberg, Kelvin "K-Man" Wimberly, Robin Jones, Stevan Gess, and several others. 21+ total Republican candidates.</p>
+      <p class="card-text" style="margin-top:0.8rem; font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em;">🎖️ Veterans & Military — Other GOP Governor Candidates</p>
+      <p class="card-text" style="margin-top:0.3rem"><strong>Greg Lopez:</strong> U.S. Air Force veteran. Former U.S. Representative (CD-4, 2024–2025). Now running as Independent. Third gubernatorial run. Military service is a biographical element but no detailed veterans platform released. <strong>Mark Baisley:</strong> State Senator from Woodland Park near military installations. No military service confirmed. <strong>Joe Oltmann:</strong> No military service confirmed; known for election conspiracy rhetoric. Other candidates have not released specific veterans platforms.</p>
+      <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: Wikipedia, Westword (Jan 2026), Denver Post (Oct 2025), Colorado Newsline (Jan 2026).</p>
+    </div>
+  </div>
+
+  <div class="party-banner ind">🟣 INDEPENDENT / THIRD PARTY — GOVERNOR</div>
+  <p class="card-text"><strong>Greg Lopez</strong> — Former Republican U.S. Rep (CD-4, 2024–2025). Running as Independent after two prior Republican gubernatorial campaigns (2018, 2022).</p>
+  <div style="background: rgba(168, 85, 247, 0.05); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 10px; padding: 1rem; margin-top: 0.8rem;">
+    <p class="card-text" style="font-weight:600; color: #c084fc; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.3rem;">🎖️ Veterans & Military — Lopez</p>
+    <p class="card-text"><strong>Military Service:</strong> U.S. Air Force veteran. Air Force service is a key part of his biography. Three-time gubernatorial candidate. No detailed veterans policy platform released for this race despite military background. Raised ~$23K.</p>
+  </div>
+<!-- ============================================ -->
+<div id="ag">
+<section class="section">
+  <div class="section-label">⚖️ STATEWIDE — ATTORNEY GENERAL</div>
+  <h2 class="section-title">Attorney General</h2>
+  <p class="section-subtitle">Four Democrats are competing to succeed term-limited AG Phil Weiser (Crisanta Duran dropped out Sept 2025). This race features an active debate over legal experience, courtroom credentials, and the frontrunner's resume claims.</p>
+
+  <div class="comparison-banner">
+    <h3>⚡ Why This Race Matters</h3>
+    <p>With AG Phil Weiser running for governor, this open seat is critical — the next AG will be Colorado's lead attorney against the Trump administration. The race features a heated dispute over legal experience: frontrunner Jena Griswold claimed she "argued at the Supreme Court" but independent legal experts called this inaccurate. Crisanta Duran dropped out in September 2025, leaving a 4-way race. All candidates emphasize fighting Trump, but their paths to AG differ dramatically.</p>
+  </div>
+
+  <div class="candidate-grid">
+    <!-- GRISWOLD -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">JG</div>
+        <div>
+          <div class="card-name">Jena Griswold</div>
+          <div class="card-role">Secretary of State (2019–present) · Age 41</div>
+          <div class="card-tags">
+            <span class="tag tag-incumbent">Frontrunner</span>
+            <span class="tag tag-moderate">Statewide Officeholder</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Born in Toledo, Ohio; moved to Estes Park, CO at age 10. Whitman College (magna cum laude, Politics & Spanish Lit, 2006). UPenn Law School (JD, 2011). Watson Foundation Fellow. Voter protection attorney for Obama 2012 campaign. Directed Gov. Hickenlooper's DC office. First Democrat elected Secretary of State since 1958; first Democratic woman to ever hold the office. Reelected 2022 by double digits. Term-limited in 2026.</p>
+
+        <div class="card-section-title">Record as Secretary of State</div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Automatic voter registration:</strong> Implemented statewide AVR, increasing voter participation</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Tina Peters:</strong> Filed suit to prevent Mesa County Clerk Peters from overseeing elections after her 2020 election interference attempt</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Election security legislation:</strong> Supported criminalizing threats to election workers and fake elector schemes</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-broken">✗</div>
+          <div><strong>Password incident:</strong> Her office mishandled partial passwords to Colorado's voting systems, which were posted on the SOS website days before the Nov 2024 election</div>
+        </div>
+
+        <div class="card-section-title">⚠️ Resume Controversy</div>
+        <p class="card-text" style="border-left: 3px solid var(--red-accent); padding-left: 0.8rem;">At a campaign forum, Griswold claimed she "argued at the U.S. Supreme Court." Independent legal experts and 9News called this inaccurate. Griswold was listed as a <em>party</em> in the Trump ballot disqualification case (Griswold v. Colorado Republican Party), but the AG's solicitor general handled oral arguments. Her campaign acknowledged she did not personally argue the case but said she "worked closely to shape the arguments." Dougherty has run TV ads attacking this claim.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem;">Source: Axios Denver (March 10, 2026), 9News.</p>
+
+        <div class="card-section-title">Campaign Finance</div>
+        <div class="finance-box">
+          <div class="finance-row">
+            <span class="finance-label">Q2 2025 Raised</span>
+            <span class="finance-value">$800K+ (record)</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Cash on Hand (start of 2026)</span>
+            <span class="finance-value">$1M+</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">First 24-Hour Raise</span>
+            <span class="finance-value">$185K (record at time)</span>
+          </div>
+        </div>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">Rep. Jamie Raskin (MD)</span>
+          <span class="endorsement">Rep. Jason Crow</span>
+          <span class="endorsement">Senate Pres. James Coleman</span>
+          <span class="endorsement">Fmr. Sen. Tim Wirth</span>
+          <span class="endorsement">Fmr. Lt. Gov. Gail Schoettler (chair)</span>
+          <span class="endorsement">Progressive Democrats of America</span>
+          <span class="endorsement">100+ elected officials</span>
+        </div>
+
+        <div class="card-section-title">Key Criticism</div>
+        <p class="card-text">Limited courtroom experience — has argued one case before a judge. Skipped Denver Press Club candidate forum (was at a fundraiser). Resume exaggeration on Supreme Court claim. Password security incident as SOS. Rivals argue Colorado needs "a battle-tested lawyer, not another politician."</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">As Secretary of State, Griswold expanded vote-by-mail and automatic voter registration that benefit military members and overseas voters. Her office administers UOCAVA (Uniformed and Overseas Citizens Absentee Voting Act) compliance. No specific veterans litigation or military policy platform released for AG race. AG role would involve defending state laws that may intersect with federal military/immigration enforcement.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado SOS office, Ballotpedia.</p>
+      </div>
+    </div>
+
+    <!-- DOUGHERTY -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">MD</div>
+        <div>
+          <div class="card-name">Michael Dougherty</div>
+          <div class="card-role">Boulder County DA (2018–present) · Age 53</div>
+          <div class="card-tags">
+            <span class="tag tag-veteran">29-Year Prosecutor</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Grew up in New York. Nassau Community College, Cornell University (BA), Boston University School of Law (JD). Started career at Manhattan DA's Office prosecuting sex crimes and homicides (12+ years). Moved to Colorado; led the AG's Criminal Justice Section under Republican AG John Suthers. Deputy DA for Jefferson/Gilpin counties. Appointed Boulder DA by Gov. Hickenlooper in 2018; elected unopposed three times. Adjunct professor at CU Law. Ultramarathoner (completed Leadville 100).</p>
+
+        <div class="card-section-title">Major Cases & Record</div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>King Soopers shooting:</strong> Led prosecution of the gunman who killed 10 people in Boulder (2021); secured life without parole</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Marshall Fire investigation:</strong> Oversaw probe into Colorado's most destructive wildfire</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>DNA Justice Review Project:</strong> Exonerated an innocent man wrongfully convicted of murder</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Bipartisan support:</strong> Endorsed by both Democratic and Republican former U.S. Attorneys (Troyer and Eid)</div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem;">Claims "thousands of cases" argued in 29 years. Handled a trial as recently as December 2025. More than half of Colorado's elected DAs — from both parties — have endorsed him, representing nearly two-thirds of the state's counties.</p>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">50%+ of CO District Attorneys (bipartisan)</span>
+          <span class="endorsement">Fmr. US Atty Robert Troyer (D)</span>
+          <span class="endorsement">Fmr. US Atty Troy Eid (R)</span>
+          <span class="endorsement">Fmr. SOS Bernie Buescher</span>
+          <span class="endorsement">Fmr. Senate Pres. Steve Fenberberg</span>
+        </div>
+
+        <div class="card-section-title">Key Criticism</div>
+        <p class="card-text">Lower name recognition and fundraising than Griswold. Boulder-heavy endorsement base may limit statewide appeal. No statewide electoral experience.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">As Boulder County DA, Dougherty's office has worked with veterans treatment courts to provide alternatives to incarceration for veterans involved in the justice system. His 29-year prosecutorial career includes working under Republican AG John Suthers at the state AG's office, demonstrating bipartisan approach. No specific military/veterans policy platform released for AG race.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Boulder County DA office, campaign statements.</p>
+      </div>
+    </div>
+
+    <!-- DOSHI -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">HD</div>
+        <div>
+          <div class="card-name">Hetal Doshi</div>
+          <div class="card-role">Former Deputy Asst. AG, DOJ Antitrust · First-time candidate</div>
+          <div class="card-tags">
+            <span class="tag tag-newcomer">Newcomer</span>
+            <span class="tag tag-veteran">Federal Prosecutor</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">First-generation Indian American. University of Virginia Law School. Served as Assistant U.S. Attorney for Colorado (2014–2022), including on Obama's financial fraud task force investigating white-collar crimes from the Great Recession. Then Deputy Assistant AG in DOJ's Antitrust Division (2022–2025) under Biden, where she led landmark antitrust cases against Google, Apple, Ticketmaster, and RealPage. Denver resident.</p>
+
+        <div class="card-section-title">Key Experience</div>
+        <p class="card-text">Federal prosecution experience at both state and federal levels, civil and criminal. Led the DOJ's biggest antitrust cases against tech monopolies. Campaign emphasizes being "a battle-tested lawyer" rather than a politician. Focus areas: defending Colorado from Trump, fighting for a fair economy, protecting public safety.</p>
+
+        <div class="card-section-title">Campaign Finance</div>
+        <div class="finance-box">
+          <div class="finance-row">
+            <span class="finance-label">First 24-Hour Raise</span>
+            <span class="finance-value">$265K (record at time)</span>
+          </div>
+        </div>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">Fmr. House Speaker Terrance Carroll</span>
+          <span class="endorsement">Fmr. Solicitor General Eric Olson</span>
+        </div>
+
+        <div class="card-section-title">Key Criticism</div>
+        <p class="card-text">No electoral experience. Less name recognition than Griswold or Dougherty. Entered race later (June 2025). Federal, not state-level, legal focus may not translate directly to state AG role.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">Federal prosecution experience at DOJ Antitrust Division could be relevant to cases involving defense contractor fraud and military procurement issues. Served as Assistant U.S. Attorney in Colorado (2014–2022), where caseload may have included fraud affecting military personnel. No specific veterans/military policy platform released.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: DOJ records, campaign website.</p>
+      </div>
+    </div>
+
+    <!-- SELIGMAN -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">DS</div>
+        <div>
+          <div class="card-name">David Seligman</div>
+          <div class="card-role">Exec. Director, Towards Justice · First-time candidate</div>
+          <div class="card-tags">
+            <span class="tag tag-newcomer">Newcomer</span>
+            <span class="tag tag-progressive">Progressive</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Harvard Law School graduate. Executive director of Towards Justice, a Denver-based progressive nonprofit law firm focused on worker and consumer rights. Previously an attorney at the National Consumer Law Center. Experience before state and federal courts across the country. Has worked alongside the AG's office on cases in Colorado.</p>
+
+        <div class="card-section-title">Campaign Focus</div>
+        <p class="card-text">Holding corporations accountable, fighting political corruption, stopping unfair workplace practices, defending consumers, and standing up to big corporations. Positions himself as the most progressive candidate with a direct litigation track record on labor and consumer rights.</p>
+
+        <div class="card-section-title">Campaign Finance</div>
+        <div class="finance-box">
+          <div class="finance-row">
+            <span class="finance-label">First 24-Hour Raise</span>
+            <span class="finance-value">$250K (record at time)</span>
+          </div>
+        </div>
+
+        <div class="card-section-title">Key Criticism</div>
+        <p class="card-text">No prosecutorial experience (civil/consumer focus). No electoral experience. Lowest polling among top candidates in Griswold's internal poll (4%). Narrow issue focus on worker/consumer rights may not cover full AG mandate (criminal justice, public safety, environmental law).</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">As director of Towards Justice, Seligman's worker and consumer rights focus may intersect with protections for veteran employees facing workplace discrimination. No specific veterans or military policy platform released for AG race.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Towards Justice, campaign website.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DROPPED OUT -->
+  <button class="collapsible-trigger" onclick="toggleCollapsible(this)">
+    Withdrawn: Crisanta Duran (dropped out Sept 2025) <span class="arrow">▼</span>
+  </button>
+  <div class="collapsible-content">
+    <div class="collapsible-content-inner">
+      <p class="card-text"><strong>Crisanta Duran</strong> — Former Speaker of the Colorado House (2017–2019), representing District 5 (Denver). DU undergrad (Public Policy & Spanish), CU Law JD. Entered race March 2025. Dropped out September 1, 2025, citing a desire to "take on monopolies of power." Her departure narrowed the field to four.</p>
+      <p class="card-text" style="margin-top:0.3rem; font-size:0.78rem; color: var(--gray-400);">No military service or specific veterans policy positions confirmed for Duran.</p>
+      <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem;">Source: CPR News (Sept 1, 2025).</p>
+    </div>
+  </div>
+
+  <!-- CONTRAST TABLE -->
+  <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 0.5rem;">At a Glance: AG Candidates</h3>
+  <div style="overflow-x: auto;">
+  <table class="contrast-table">
+    <thead>
+      <tr>
+        <th>Factor</th>
+        <th>Griswold</th>
+        <th>Dougherty</th>
+        <th>Doshi</th>
+        <th>Seligman</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Courtroom Experience</strong></td>
+        <td>Minimal (1 case argued)</td>
+        <td>29 years, "thousands of cases"</td>
+        <td>20+ years federal prosecution</td>
+        <td>Civil litigation (worker/consumer)</td>
+      </tr>
+      <tr>
+        <td><strong>Electoral Experience</strong></td>
+        <td>2 statewide wins as SOS</td>
+        <td>3 DA elections (unopposed)</td>
+        <td>None</td>
+        <td>None</td>
+      </tr>
+      <tr>
+        <td><strong>Name Recognition</strong></td>
+        <td>Highest (66% ID)</td>
+        <td>Moderate</td>
+        <td>Low</td>
+        <td>Low</td>
+      </tr>
+      <tr>
+        <td><strong>Fundraising</strong></td>
+        <td>$1M+ (dominant)</td>
+        <td>Competitive</td>
+        <td>$265K first day</td>
+        <td>$250K first day</td>
+      </tr>
+      <tr>
+        <td><strong>Unique Pitch</strong></td>
+        <td>Proven statewide fighter; election defender</td>
+        <td>Most trial experience; bipartisan DA support</td>
+        <td>Broke up Google, Apple, Ticketmaster at DOJ</td>
+        <td>Worker/consumer rights champion</td>
+      </tr>
+      <tr>
+        <td><strong>Key Vulnerability</strong></td>
+        <td>Resume exaggeration; limited legal practice</td>
+        <td>Lower name ID; Boulder-centric</td>
+        <td>No electoral track record</td>
+        <td>No prosecution background</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- GOP AG -->
+  <div class="party-banner gop">🐘 REPUBLICAN PRIMARY CANDIDATES — ATTORNEY GENERAL</div>
+  <div class="candidate-grid">
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">MA</div>
+        <div>
+          <div class="card-name">Michael Allen</div>
+          <div class="card-role">Republican candidate</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Filed for the Republican primary. Limited public profile and campaign information available as of March 2026.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: Not confirmed.</p>
+        <p class="card-text">Limited public profile. No veterans/military policy positions publicly available.</p>
+      </div>
+    </div>
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">CP</div>
+        <div>
+          <div class="card-name">Conner Pennington</div>
+          <div class="card-role">Political newcomer</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span><span class="tag tag-newcomer">First-Time Candidate</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">First Republican to file for AG. Political newcomer. Colorado Republican Party Chair Brita Horn has used Griswold's involvement in the Trump ballot case as an argument against her candidacy, saying the Supreme Court unanimously ruled against Colorado's position. Limited fundraising compared to Democratic field.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: Not confirmed.</p>
+        <p class="card-text">Political newcomer. No veterans/military policy positions publicly available.</p>
+      </div>
+    </div>
+  </div>
+<div id="sos">
+<section class="section">
+  <div class="section-label">📝 STATEWIDE — SECRETARY OF STATE</div>
+  <h2 class="section-title">Secretary of State</h2>
+  <p class="section-subtitle">Two Democrats — Jessie Danielson and Amanda Gonzalez — are running to succeed term-limited Jena Griswold.</p>
+
+  <div class="candidate-grid">
+    <!-- DANIELSON -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">JD</div>
+        <div>
+          <div class="card-name">Jessie Danielson</div>
+          <div class="card-role">State Senator, SD-22 (2019–present) · Fmr. State Rep.</div>
+          <div class="card-tags">
+            <span class="tag tag-incumbent">State Legislator</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">4th-generation Coloradan, grew up on family farm in Weld County. State lawmaker since 2015 (House, then Senate SD-22 in Wheat Ridge/Lakewood area). Former CO State Director for America Votes (election access advocacy). Former political director for NARAL Pro-Choice Colorado. Named Colorado AFL-CIO "Labor Champion" in 2022. Married to Democratic strategist Andy Kabza.</p>
+
+        <div class="card-section-title">Legislative Record</div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Automatic voter registration:</strong> Helped write and pass Colorado's AVR law</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Election modernization (2013):</strong> Worked to pass law expanding mail-in voting</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Equal pay law:</strong> Steered Colorado's equal pay legislation into law</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Rain barrels:</strong> Legalized rooftop rainwater collection</div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem">Campaign message: "I helped build the system that made Colorado a national model for secure, fair and accessible elections — and now I'm running to protect it."</p>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">Arapahoe Comm. Rhonda Fields</span>
+          <span class="endorsement">Fmr. PP CEO Vicki Cowart</span>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Newsline (July 2025), Colorado Politics (July 2025).</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">As a state legislator, Danielson helped pass Colorado's automatic voter registration and expanded mail-in voting — both of which benefit deployed military personnel and overseas voters. The SOS office administers UOCAVA compliance ensuring military members can vote from anywhere. Her farm-community background in Weld County includes connections to military families near Buckley Space Force Base.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado General Assembly, campaign website.</p>
+      </div>
+    </div>
+
+    <!-- GONZALEZ -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">AG</div>
+        <div>
+          <div class="card-name">Amanda Gonzalez</div>
+          <div class="card-role">Jefferson County Clerk & Recorder (elected)</div>
+          <div class="card-tags">
+            <span class="tag tag-newcomer">Election Administrator</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Occidental College (BA, 2006), DU Sturm College of Law (JD, 2011). Attorney and former Executive Director of Colorado Common Cause, where she helped write laws creating automatic voter registration, expanding ballot drop boxes, and safeguarding fair redistricting. Elected JeffCo Clerk & Recorder — first Latina and first openly LGBTQ person to hold the office. Manages voting for nearly 600,000 residents. First in her immediate family to graduate college and law school.</p>
+
+        <div class="card-section-title">Key Record</div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Election administration:</strong> Only candidate with direct experience running large-scale elections (JeffCo ~600K residents)</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Innovations:</strong> Implemented jail-based voting, expanded ballot drop boxes, multilingual ballots</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Authored AVR law:</strong> Helped write automatic voter registration as Common Cause ED</div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem">Campaign emphasis: "No on-the-job training required." Would be first Latina and first LGBTQ Secretary of State in Colorado history.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Ballotpedia Candidate Connection survey, Colorado Sun (July 2025).</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">As Jefferson County Clerk, Gonzalez administers elections for a county adjacent to Buckley Space Force Base, serving military voters. Implemented jail-based voting and expanded multilingual ballot access. The SOS role would oversee UOCAVA military/overseas voter compliance statewide. No specific military/veterans policy platform released.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: JeffCo Clerk's office, campaign website.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-top: 2rem; margin-bottom: 0.5rem;">At a Glance: Danielson vs. Gonzalez</h3>
+  <div style="overflow-x: auto;">
+  <table class="contrast-table">
+    <thead><tr><th>Factor</th><th>Danielson</th><th>Gonzalez</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Election Experience</strong></td><td>Wrote election laws as legislator & advocate</td><td>Actually runs elections (JeffCo Clerk)</td></tr>
+      <tr><td><strong>Background</strong></td><td>10+ years as state legislator; America Votes</td><td>Attorney; Common Cause ED; County Clerk</td></tr>
+      <tr><td><strong>Historic Candidacy</strong></td><td>—</td><td>Would be first Latina & first LGBTQ SOS</td></tr>
+      <tr><td><strong>Key Pitch</strong></td><td>"I built this system; now I'll protect it"</td><td>"Only candidate who's actually run elections"</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- GOP SOS -->
+  <div class="party-banner gop">🐘 REPUBLICAN PRIMARY CANDIDATES — SECRETARY OF STATE</div>
+  <p class="card-text" style="margin-bottom: 1rem;">Four Republicans: <strong>James McKinzie</strong>, <strong>Cory Parella</strong> (Denver), <strong>Ross Taraborelli</strong> (Highlands Ranch), and <strong>James Wiley</strong>. Limited public information available on most candidates.</p>
+  <p class="card-text" style="font-size:0.8rem; color: var(--gray-400); margin-top:0.5rem;">🎖️ <em>No military service records or veterans policy positions confirmed for GOP SOS candidates.</em></p>
+
+  <div class="party-banner ind">🟣 INDEPENDENT / THIRD PARTY — SECRETARY OF STATE</div>
+  <p class="card-text"><strong>Celeste Landry</strong> and <strong>Melissa Richards</strong> (Englewood, Unaffiliated) are running in the general election.</p>
+  <p class="card-text" style="font-size:0.8rem; color: var(--gray-400); margin-top:0.5rem;">🎖️ <em>No military service records or veterans policy positions confirmed for Independent SOS candidates.</em></p>
+
+</section>
+</div>
+
+<div class="divider"></div>
+
+<div id="treasurer">
+<section class="section">
+  <div class="section-label">💰 STATEWIDE — TREASURER</div>
+  <h2 class="section-title">State Treasurer</h2>
+  <p class="section-subtitle">Four Democrats — Jeff Bridges, Gerald Ditullio, John Mikos, and Brianna Titone — are running to succeed term-limited Dave Young.</p>
+
+  <div class="candidate-grid">
+    <!-- BRIDGES -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">JB</div>
+        <div>
+          <div class="card-name">Jeff Bridges</div>
+          <div class="card-role">State Senator, SD-26 · JBC Chair</div>
+          <div class="card-tags">
+            <span class="tag tag-incumbent">Establishment Pick</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background & Record</div>
+        <p class="card-text">Greenwood Village. State Rep (2017–2019, HD-3), then State Senator SD-26 (2020–present). Chair of the Joint Budget Committee (JBC) — the legislature's most powerful fiscal body. Led the JBC through the $1.2 billion budget shortfall caused by federal cuts. Sponsored full-day kindergarten, pandemic small business relief, and comprehensive paid sick leave. Long endorsement list from legislative leadership.</p>
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">Fmr. Amb. Ken Salazar</span>
+          <span class="endorsement">Senate Pres. James Coleman</span>
+          <span class="endorsement">Fmr. Senate Pres. Steve Fenberg</span>
+          <span class="endorsement">Sen. Dylan Roberts</span>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Politics (April 2025), Colorado Newsline (April 2025).</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">As JBC Chair, Bridges oversees state budget allocations that include funding for Colorado's Division of Veterans Affairs and state-funded veteran services. Led the legislature through a $1.2B budget shortfall caused by federal cuts — directly impacting veteran service funding. The State Treasurer manages investment portfolios that include state pension obligations affecting retired state employees, including those who served in the military.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado General Assembly, JBC records.</p>
+      </div>
+    </div>
+
+    <!-- TITONE -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">BT</div>
+        <div>
+          <div class="card-name">Brianna Titone</div>
+          <div class="card-role">State Rep, HD-27 (2019–present) · Geologist</div>
+          <div class="card-tags">
+            <span class="tag tag-progressive">Historic Candidacy</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background & Record</div>
+        <p class="card-text">Arvada. First transgender member of the Colorado General Assembly (elected 2018). Vice-Chair of House Finance Committee and Chair of Joint Technology Committee. Career geologist before politics. Term-limited in the House. If elected, would be the first transgender person elected to a statewide executive office in U.S. history.</p>
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">Sen. Dafna Michaelson Jenet</span>
+          <span class="endorsement">Sen. Lisa Cutter</span>
+          <span class="endorsement">Rep. Elizabeth Velasco</span>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Sun (Feb 2025), Wikipedia.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">As Vice-Chair of House Finance Committee, Titone has worked on state budget issues including funding for veteran services. Her HD-27 district (Arvada) includes veteran households connected to nearby military installations. As a transgender legislator, Titone's advocacy intersects with military policy — the Trump administration's ban on transgender service members is a relevant issue. No specific veterans policy platform released for treasurer race.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado General Assembly, Wikipedia.</p>
+      </div>
+    </div>
+
+    <!-- DITULLIO -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">GD</div>
+        <div>
+          <div class="card-name">Jerry DiTullio</div>
+          <div class="card-role">Jefferson County Treasurer</div>
+          <div class="card-tags">
+            <span class="tag tag-newcomer">County Finance Official</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Elected Jefferson County Treasurer. Brings direct treasury/finance management experience at the county level. Endorsed by House Majority Leader Monica Duran, state Rep. Sheila Lieder, and state Sen. Lindsey Daugherty. Entered the race before Bridges or Titone.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Sun (Feb 2025), Wikipedia.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None confirmed.</p>
+        <p class="card-text">As Jefferson County Treasurer, DiTullio manages county finances including tax collection for areas near Buckley Space Force Base. County finance experience relevant to managing state investments that affect veteran pension obligations. No specific veterans policy platform released.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: JeffCo Treasurer's office.</p>
+      </div>
+    </div>
+
+    <!-- MIKOS -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">JM</div>
+        <div>
+          <div class="card-name">John Mikos</div>
+          <div class="card-role">Fmr. Chair, El Paso County Democratic Party</div>
+          <div class="card-tags">
+            <span class="tag tag-newcomer">Party Organizer</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Monument, CO. Former chairman of the El Paso County Democratic Party. First Democrat to file for treasurer (Nov 2025). Limited public profile compared to other candidates. Management consultant background. Running on a party-organizing and fiscal accountability platform.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Sun, Ballotpedia.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None confirmed.</p>
+        <p class="card-text">Based in Monument (El Paso County), Mikos is deeply embedded in a military-heavy community. As former El Paso County Democratic Party chair, he organized in a district with Fort Carson, Peterson Space Force Base, Schriever Space Force Base, Cheyenne Mountain, and the Air Force Academy. His management consulting background and local party work suggest familiarity with military community needs, though no specific veterans policy platform has been released.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Ballotpedia, Colorado Sun.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GOP TREASURER -->
+  <div class="party-banner gop">🐘 REPUBLICAN PRIMARY CANDIDATE — TREASURER</div>
+  <div class="candidate-grid">
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">KG</div>
+        <div>
+          <div class="card-name">Kevin J. Grantham</div>
+          <div class="card-role">Fremont County Commissioner · Fmr. Senate President</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Former President of the Colorado State Senate (2017–2019). Currently serving as a Fremont County Commissioner. Only Republican to file for treasurer. Has significant legislative experience including fiscal oversight. Entered the race in September 2025.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: CPR News (Sept 2025), Ballotpedia.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: Not confirmed.</p>
+        <p class="card-text">Former President of the Colorado State Senate. Fremont County Commissioner. Legislative experience includes fiscal oversight that would have involved veteran service budget decisions. No specific veterans platform released for treasurer race.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: CPR News, Ballotpedia.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="party-banner ind">🟣 INDEPENDENT / THIRD PARTY — TREASURER</div>
+  <p class="card-text"><strong>Murl Hendrickson IV</strong> is running in the general election as an unaffiliated candidate.</p>
+  <p class="card-text" style="font-size:0.8rem; color: var(--gray-400); margin-top:0.5rem;">🎖️ <em>No military service or veterans policy positions confirmed.</em></p>
+
+</section>
+</div>
+
+<div class="divider"></div>
+
+<!-- ===== CD-5 ===== -->
+<div id="cd5">
+<section class="section">
+  <div class="section-label">🏠 CONGRESSIONAL — CD-5 (EL PASO COUNTY)</div>
+  <h2 class="section-title">CD-5: Killin vs. Reagan</h2>
+  <p class="section-subtitle">For the first time in its 50+ year history, national Democrats are targeting Colorado's 5th District. Both Jessica Killin and Joe Reagan qualified at the March 14 district assembly. Matt Cavanaugh dropped out March 18.</p>
+
+  <div class="comparison-banner">
+    <h3>⚡ Why This Race Matters</h3>
+    <p>For the first time in its 54-year history, national Democrats (DCCC) are targeting CD-5. The district has never elected a Democrat, but its Cook PVI shifted from R+9 to R+5 — the fastest leftward movement in the country. Over 600 Democrats showed up at the March 14 district assembly, a record. Matt Cavanaugh dropped out March 18 after his petition firm failed. Both remaining candidates are Army veterans. The winner will face Republican Rep. Jeff Crank, who won by 14 points in 2024.</p>
+  </div>
+
+  <div class="candidate-grid">
+    <!-- KILLIN -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">JK</div>
+        <div>
+          <div class="card-name">Jessica Killin</div>
+          <div class="card-role">Army Veteran · Fmr. Chief of Staff to Doug Emhoff · Age 51</div>
+          <div class="card-tags">
+            <span class="tag tag-newcomer">First-Time Candidate</span>
+            <span class="tag tag-veteran">Army Captain</span>
+            <span class="tag tag-moderate">Centrist Democrat</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">4th-generation Coloradan, born and raised in Colorado Springs. Graduated Falcon High School. ROTC scholarship; served 1995–2003 as U.S. Army paratrooper and military police officer in Europe, reaching rank of Captain. Deployed on Balkans peacekeeping missions and NATO expansion. Georgetown University Law Center (JD); later taught there. Career: lead lobbyist for USAA (military financial services, VA home loans, fighting predatory lenders). Then Congressional chief of staff for Reps. Donna Shalala, Carolyn Maloney, and Marie Gluesenkamp Perez. Chief of Staff to Second Gentleman Doug Emhoff (Deputy Assistant to President Biden). Returned to Colorado Springs summer 2025.</p>
+
+        <div class="card-section-title">Policy Positions</div>
+        <p class="card-text">Self-describes as "middle-of-the-road centrist, almost center-right Democrat." Supports restoring Roe v. Wade but says she wouldn't personally choose abortion. Supports expanding insurance coverage but opposes Medicare for All. Criticizes Crank's vote for the "One Big Beautiful Bill" for stripping 225,000 Coloradans of healthcare while adding $3T+ to national debt. On immigration: thinks Biden was too slow to close border; agrees with Trump's border shutdown but calls deportation measures "immoral and illegal."</p>
+
+        <div class="card-section-title">Assembly Results (March 14)</div>
+        <div class="vote-bar-container">
+          <div class="vote-bar-label">
+            <span>Delegate Vote (top-line designation)</span>
+            <span>39.6%</span>
+          </div>
+          <div class="vote-bar">
+            <div class="vote-bar-fill gold" style="width: 39.6%"></div>
+          </div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400);">Also qualified by petition (2,204 valid of 3,511 submitted). Dual qualification (petition + assembly).</p>
+
+        <div class="card-section-title">Campaign Finance (FEC)</div>
+        <div class="finance-box">
+          <div class="finance-row">
+            <span class="finance-label">Total Raised (2025)</span>
+            <span class="finance-value">$1.6M+</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Cash on Hand (Dec 2025)</span>
+            <span class="finance-value">$1.1M</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">First 24-Hour Raise</span>
+            <span class="finance-value">$750K+ (national record)</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Out-of-State Donors</span>
+            <span class="finance-value">90%+</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">FEC Committee</span>
+            <span class="finance-value"><a href="https://www.fec.gov/data/committee/C00911941/">KILLIN FOR COLORADO (C00911941)</a></span>
+          </div>
+        </div>
+        <p class="card-text" style="margin-top:0.5rem; font-size:0.78rem; color: var(--gray-400)">Source: FEC filings, Colorado Politics (Dec 2025, March 2026). Her $1.6M is more than any Democrat has ever raised for this seat. She outraised Crank ($1.2M). Crank's campaign calls her a "D.C. Swamp creature" noting 90%+ out-of-state donations.</p>
+
+        <div class="card-section-title">Key Endorsements</div>
+        <div class="endorsements">
+          <span class="endorsement">All 4 CO Democratic Reps</span>
+          <span class="endorsement">Sen. Hickenlooper</span>
+          <span class="endorsement">Sen. Bennet</span>
+          <span class="endorsement">EMILY's List</span>
+          <span class="endorsement">Vote Vets</span>
+          <span class="endorsement">Defend the Vote</span>
+          <span class="endorsement">Doug Emhoff</span>
+        </div>
+
+        <div class="card-section-title">Key Criticism</div>
+        <p class="card-text">Only recently moved back to CO Springs after 20+ years in DC. 90%+ out-of-state fundraising raises "carpetbagger" concerns. DC insider background (lobbyist, White House staff) may not resonate in a military-heavy district that values local ties. Centrist positioning may dampen progressive base enthusiasm.</p>
+
+        <div class="card-section-title">Internal Polling</div>
+        <p class="card-text">Oct 2025 Global Strategy Group poll (450 likely voters): Killin trails Crank 43%–40% in initial matchup (within MOE). After bio/policy info, Killin pulls slightly ahead. Crank has 59% name ID but net-negative favorability. Trump and MAGA Republicans have net-negative favorability in the district.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: U.S. Army Captain (1995–2003). Paratrooper, military police officer. Balkans peacekeeping, NATO expansion. ROTC scholarship.</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>USAA Veteran Advocacy (10+ years):</strong> As lead lobbyist/executive at USAA, Killin spent over a decade fighting to protect military families — streamlining VA home loans, combating predatory payday lenders targeting service members, and shielding veterans from the 2008 financial crisis fallout. VoteVets-endorsed.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Space Command HQ:</strong> Campaign has explicitly criticized Crank for not doing enough to protect Space Command in Colorado Springs. Her campaign spokesman said Crank "has barely lifted a finger to protect things like Space Command."</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>VA Healthcare:</strong> Supports expanding VA healthcare access. Campaign platform includes protecting veterans from the "One Big Beautiful Bill" that stripped 225,000 Coloradans of healthcare coverage. Endorsed by VoteVets PAC.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Military Family Support:</strong> Career has centered on military families — from active duty service to USAA consumer protection to congressional advocacy. EMILY's List profile highlights "protecting veterans" as a core campaign plank.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-partial">~</div>
+          <div><strong>DOD Spending:</strong> Self-described "center-right Democrat." Likely to support robust defense spending given her military background and district's five military installations. Has not released a specific DOD budget position.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-partial">~</div>
+          <div><strong>Immigration &amp; Military:</strong> Thinks Biden was "too slow to close the border" and agrees with Trump's border shutdown, but calls deportation measures "immoral and illegal." Has not specifically addressed using military for domestic immigration enforcement.</div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: killinforcolorado.com, EMILY's List, VoteVets, Colorado Politics (July 2025, March 2026), Colorado Springs Gazette.</p>
+      </div>
+    </div>
+
+    <!-- REAGAN -->
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">JR</div>
+        <div>
+          <div class="card-name">Joe Reagan</div>
+          <div class="card-role">Army Combat Veteran · Nonprofit Leader · 2nd run</div>
+          <div class="card-tags">
+            <span class="tag tag-challenger">Challenger</span>
+            <span class="tag tag-veteran">Army Veteran</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-section-title">Background</div>
+        <p class="card-text">Army combat veteran. Norwich University graduate (the nation's oldest private military college). Director of outreach for Wreaths Across America. Currently director of business outreach at Mt. Carmel Veterans Service Center in Colorado Springs. Ran for this seat in 2024, losing the Democratic primary to River Gassen. Deep local roots and community ties in El Paso County.</p>
+
+        <div class="card-section-title">2024 Primary Record</div>
+        <p class="card-text">Lost 2024 CD-5 Democratic primary to River Gassen, who went on to lose the general to Crank by 14 points. Gassen raised less than $175K total — a fraction of what Killin has raised this cycle. Reagan's return represents a belief that the district has shifted enough to be competitive with the right candidate and national environment.</p>
+
+        <div class="card-section-title">Assembly Results (March 14)</div>
+        <div class="vote-bar-container">
+          <div class="vote-bar-label">
+            <span>Delegate Vote (qualified)</span>
+            <span>34.2%</span>
+          </div>
+          <div class="vote-bar">
+            <div class="vote-bar-fill blue" style="width: 34.2%"></div>
+          </div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400);">Cleared 30% threshold at assembly. Also petitioned (pending verification).</p>
+
+        <div class="card-section-title">Campaign Message</div>
+        <p class="card-text">"This race is about MAGA vs. the rest of us." Emphasizes local community trust, volunteer infrastructure, and cross-partisan credibility built over years of service in the region. Argues that national consultants and DC money can't replicate authentic local relationships. Positions himself as the grassroots, community-first alternative to Killin's establishment-backed campaign.</p>
+
+        <div class="card-section-title">Campaign Finance</div>
+        <div class="finance-box">
+          <div class="finance-row">
+            <span class="finance-label">Fundraising</span>
+            <span class="finance-value">Significantly behind Killin</span>
+          </div>
+          <div class="finance-row">
+            <span class="finance-label">Strategy</span>
+            <span class="finance-value">Grassroots/volunteer-heavy</span>
+          </div>
+        </div>
+
+        <div class="card-section-title">Key Strength</div>
+        <p class="card-text">Years of established community relationships in El Paso County. Local credibility that "no dollar amount can replicate." Second-time candidate with institutional knowledge of the district. Argues the district needs a local face, not a DC returnee.</p>
+
+        <div class="card-section-title">Key Criticism</div>
+        <p class="card-text">Already lost once in 2024 primary. Massive fundraising disadvantage vs. Killin ($1.6M). Limited national support/endorsements compared to Killin's full Democratic congressional delegation backing. Question of whether grassroots approach alone can beat a well-funded Republican in a R+5 district.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: U.S. Army combat veteran. Norwich University graduate (nation's oldest private military college). Two combat tours in Afghanistan. Exposed to toxic burn pits.</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Mt. Carmel Veterans Service Center:</strong> Director of business outreach (and director of Colorado Veterans Business Outreach Center). Directly serves veterans daily — career, transition, behavioral health, and family support services. Has helped 5,000+ unique veteran clients in the Pikes Peak region.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>PACT Act &amp; Burn Pits (Personal):</strong> At a 2024 CD-5 candidate forum, Reagan spoke from personal experience about burn pit exposure, noting that as a 42-year-old veteran, he has increased cancer risk from toxic substances in Afghanistan — exactly the kind of exposure the PACT Act addresses. Argued that only VA providers have the specialized knowledge to treat veteran-specific conditions.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>VA Healthcare:</strong> Advocates for strengthening — not privatizing — VA healthcare. At the 2024 forum, he warned that community-care outsourcing fails veterans because civilian providers lack military-specific medical expertise.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Space Command HQ:</strong> Unequivocally supports keeping Space Command in Colorado Springs. Spoke at 2024 CD-5 forum affirming the decision should be based on operational readiness, not politics.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Veteran Entrepreneurship:</strong> Through the Colorado VBOC, supports ~50 transitioning service members per month with entrepreneurship training. Tracks and advocates for the estimated 900 veteran-owned businesses in El Paso County.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-kept">✓</div>
+          <div><strong>Wreaths Across America:</strong> Former director of outreach for the national organization honoring veterans at military cemeteries.</div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: veteranscenter.org, Colorado Springs Gazette (April 2024 forum), LinkedIn, Reagan campaign, Gazette (Oct 2025).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DROPPED / OTHER -->
+  <button class="collapsible-trigger" onclick="toggleCollapsible(this)">
+    Withdrawn & Other Candidates (Cavanaugh, Horowitz, Lord) <span class="arrow">▼</span>
+  </button>
+  <div class="collapsible-content">
+    <div class="collapsible-content-inner">
+      <p class="card-text"><strong>Matt Cavanaugh (WITHDRAWN March 18)</strong> — Retired Army Lt. Colonel, West Point grad, ultramarathoner, kidney donor. Originally ran as independent (Oct 2025), switched to Democratic primary (Jan 2026). Dropped out after petition firm TouchStone failed to collect enough valid signatures. May still appear on general election ballot as an independent. Said he plans to help Democrats win the House.</p>
+      <p class="card-text" style="margin-top:0.8rem"><strong>Zurit Zuriel Horowitz</strong> — Nonprofit leader, community activist, former member of Citizens' Transportation Advisory Board. Received 25.2% at assembly — fell short of the 30% threshold. Did not qualify for primary.</p>
+      <p class="card-text" style="margin-top:0.8rem"><strong>Justice Lord</strong> — Longtime activist. Received 0.9% at assembly. Did not qualify.</p>
+      <p class="card-text" style="margin-top:0.8rem; font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em;">🎖️ Veterans & Military — Withdrawn/Other CD-5 Candidates</p>
+      <p class="card-text" style="margin-top:0.3rem"><strong>Matt Cavanaugh (WITHDRAWN):</strong> Retired Army Lt. Colonel. West Point graduate. Extensive military career and combat deployments. Was the third Army veteran in the CD-5 Democratic field before withdrawing. May still appear on the general election ballot as Independent. <strong>Zurit Zuriel Horowitz and Justice Lord:</strong> No military service records confirmed. Did not qualify for primary.</p>
+      <p class="card-text" style="margin-top:0.8rem; font-size:0.78rem; color: var(--gray-400)">Source: Colorado Politics (March 2026), KOAA News.</p>
+    </div>
+  </div>
+
+  <!-- CONTRAST TABLE -->
+  <h3 style="font-family: 'DM Serif Display', serif; font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 0.5rem;">At a Glance: Killin vs. Reagan</h3>
+  <div style="overflow-x: auto;">
+  <table class="contrast-table">
+    <thead>
+      <tr>
+        <th>Factor</th>
+        <th>Killin</th>
+        <th>Reagan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Military Service</strong></td>
+        <td>Army Captain, paratrooper, MP (1995–2003)</td>
+        <td>Army combat veteran, Norwich grad</td>
+      </tr>
+      <tr>
+        <td><strong>Local Ties</strong></td>
+        <td>4th-gen Coloradan, Falcon HS; but 20+ yrs in DC</td>
+        <td>Years of active community work in El Paso County</td>
+      </tr>
+      <tr>
+        <td><strong>DC Experience</strong></td>
+        <td>Extensive (White House, Congress, lobbying)</td>
+        <td>Minimal</td>
+      </tr>
+      <tr>
+        <td><strong>Fundraising</strong></td>
+        <td>$1.6M+ (90% out-of-state)</td>
+        <td>Far behind; grassroots model</td>
+      </tr>
+      <tr>
+        <td><strong>Assembly Finish</strong></td>
+        <td>1st (39.6%, top-line)</td>
+        <td>2nd (34.2%, qualified)</td>
+      </tr>
+      <tr>
+        <td><strong>Endorsements</strong></td>
+        <td>Full CO Dem delegation, EMILY's List, VoteVets</td>
+        <td>Local/grassroots focused</td>
+      </tr>
+      <tr>
+        <td><strong>Ideology</strong></td>
+        <td>Self-described "center-right Democrat"</td>
+        <td>Broad coalition / anti-MAGA</td>
+      </tr>
+      <tr>
+        <td><strong>Prior Races</strong></td>
+        <td>First-time candidate</td>
+        <td>2024 CD-5 primary (lost)</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- GOP CD-5 -->
+  <div class="party-banner gop">🐘 REPUBLICAN INCUMBENT — CD-5</div>
+  <div class="candidate-grid">
+    <div class="candidate-card gop-card">
+      <div class="card-header">
+        <div class="card-avatar">JC</div>
+        <div>
+          <div class="card-name">Jeff Crank</div>
+          <div class="card-role">U.S. Representative (2025–present) · 1st term</div>
+          <div class="card-tags"><span class="tag tag-gop">Republican Incumbent</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Former radio host and longtime political operative. Won 2024 election by 14 points (54.7%), defeating Dave Williams in the GOP primary and River Gassen (D) in the general. Qualified for 2026 primary by petition (2,442 valid signatures). No Republican primary challenger. Voted for Trump's "One Big Beautiful Bill," which Democrats argue stripped 225,000 Coloradans of healthcare while adding $3T+ to the national debt. Killin's internal poll shows Crank with 59% name ID but net-negative favorability, and only a 3-point lead in a head-to-head matchup.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Politics, Ballotpedia, FEC.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None (former radio host/political operative).</p>
+        <div class="promise-item">
+          <div class="promise-icon promise-broken">✗</div>
+          <div><strong>Space Command HQ:</strong> Entire CO delegation (including Crank) issued a joint statement opposing Trump's Sept 2025 decision to move Space Command to Alabama. However, Democrats argue Crank has not been aggressive enough in fighting the move given Trump's influence over his party.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-broken">✗</div>
+          <div><strong>"One Big Beautiful Bill":</strong> Voted YES on Trump's budget bill, which Democrats say stripped 225,000 Coloradans (including veteran families) of healthcare coverage while adding $3T+ to the national debt.</div>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon promise-partial">~</div>
+          <div><strong>VA/Military Funding:</strong> Represents a district with five major military installations (Fort Carson, Peterson SFB, Schriever SFB, Cheyenne Mountain, Air Force Academy). Specific VA legislation positions unclear from first term.</div>
+        </div>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Politics, joint delegation statement (Sept 2025), FEC.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="party-banner ind">🟣 INDEPENDENT / THIRD PARTY — CD-5</div>
+  <p class="card-text"><strong>Matt Cavanaugh</strong> (Independent) — Despite dropping out of the Democratic primary, Cavanaugh is still listed as a general election candidate. Also: <strong>Steven Fuller</strong> (Unaffiliated) and <strong>Roy Matthewson</strong> (Unaffiliated).</p>
+  <div style="background: rgba(168, 85, 247, 0.05); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 10px; padding: 1rem; margin-top: 0.8rem;">
+    <p class="card-text" style="font-weight:600; color: #c084fc; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.3rem;">🎖️ Veterans & Military — Independents</p>
+    <p class="card-text"><strong>Matt Cavanaugh:</strong> Retired Army Lt. Colonel, West Point graduate. Would have been the most senior military officer in the CD-5 field. Kidney donor and ultramarathoner. Said he plans to help Democrats win the House despite dropping out. <strong>Fuller and Matthewson:</strong> No military service records confirmed.</p>
+  </div>
+
+</section>
+</div>
+
+<div class="divider"></div>
+<div id="cd1">
+<section class="section">
+  <div class="section-label">CONGRESSIONAL — CD-1</div>
+  <h2 class="section-title">CD-1: Denver</h2>
+  <p class="section-subtitle">15-term incumbent Diana DeGette faces challengers including Melat Kiros, who defeated her in a delegate preference poll at the Denver county assembly.</p>
+  <div class="comparison-banner">
+    <h3>⚡ Upset Alert</h3>
+    <p>15-term incumbent Diana DeGette faces a serious challenge from Melat Kiros, a 28-year-old daughter of Ethiopian immigrants who defeated DeGette in a delegate preference poll at the Denver county assembly. DeGette has held this seat since 1996. Wanda James, a CU Board of Regents member, is also running.</p>
+  </div>
+  <div class="candidate-grid">
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">DD</div>
+        <div>
+          <div class="card-name">Diana DeGette</div>
+          <div class="card-role">U.S. Representative (1997–present) · 15 terms</div>
+          <div class="card-tags"><span class="tag tag-incumbent">Incumbent</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Denver's longest-serving House member. Won reelection in 2024 with 76.6%. Democratic Chief Deputy Whip. Chairs the Energy & Commerce Subcommittee on Oversight and Investigations. First elected in 1996 to succeed Pat Schroeder.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Ballotpedia, Colorado Politics.</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">15-term incumbent. Voted YES on the PACT Act in the House. Signed the joint Colorado delegation statement opposing Space Command relocation to Alabama (Sept 2025). Chairs the Energy &amp; Commerce Subcommittee on Oversight — has overseen investigations including defense-related matters. Denver's CD-1 is less military-heavy than CD-5, but DeGette has voted consistently for VA funding and NDAA authorizations.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: degette.house.gov, joint delegation statement, GovTrack.us.</p>
+      </div>
+    </div>
+    <div class="candidate-card">
+      <div class="card-header">
+        <div class="card-avatar">MK</div>
+        <div>
+          <div class="card-name">Melat Kiros</div>
+          <div class="card-role">First-time candidate · Age 28</div>
+          <div class="card-tags"><span class="tag tag-challenger">Challenger</span><span class="tag tag-progressive">Progressive</span></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Daughter of Ethiopian immigrants. Defeated DeGette in a delegate preference poll at the Denver county assembly — a significant warning shot for a 15-term incumbent. Part of a national trend of younger Democrats challenging long-serving party officials. Campaigning on generational change.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Colorado Politics (March 2026).</p>
+      
+        <div class="card-section-title">🎖️ Veterans &amp; Military Policy</div>
+        <p class="card-text" style="font-weight:600; color: var(--sky); margin-bottom:0.4rem;">Military Service: None.</p>
+        <p class="card-text">First-time candidate, age 28. Daughter of Ethiopian immigrants. No specific veterans or military policy platform publicly available. Campaigning on generational change — policy specifics on military/veterans issues are still developing.</p>
+        <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: Campaign website, Colorado Politics (March 2026).</p>
+      </div>
+    </div>
+  </div>
+<section class="section">
+  <div class="section-label">CONGRESSIONAL — CD-2</div>
+  <h2 class="section-title">CD-2: Boulder / North Central</h2>
+  <p class="section-subtitle">Incumbent Joe Neguse.</p>
+  <p class="card-text">Incumbent <strong>Joe Neguse</strong> was re-elected in 2024 with 68.4%. He has endorsed Michael Bennet for governor. No significant primary challenge expected. Neguse is considered a rising star in the party and was reportedly considered for the governor's race before deferring to Bennet.</p>
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.2rem; margin-top: 1rem;">
+    <p class="card-text" style="font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">🎖️ Veterans & Military Policy — Neguse</p>
+    <p class="card-text"><strong>Military Service:</strong> None. <strong>Key Record:</strong> Part of the full Colorado delegation that signed the joint statement opposing Space Command relocation to Alabama. Voted YES on the PACT Act in the House. Supports VA funding and military family benefits. Boulder/North Central district has less military presence than southern Colorado but includes some veteran communities.</p>
+    <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: neguse.house.gov, joint delegation statement (Sept 2025).</p>
+  </div>
+<section class="section">
+  <div class="section-label">CONGRESSIONAL — CD-3</div>
+  <h2 class="section-title">CD-3: Western Slope</h2>
+  <p class="section-subtitle">R-held district (Jeff Hurd). Democratic challengers TBD.</p>
+  <p class="card-text">R-held district. Incumbent Republican <strong>Jeff Hurd</strong> won in 2024 with 50.8% — the narrowest margin of any CO House race. Trump initially backed Hurd, then endorsed challenger Hope Scheppelman, then re-endorsed Hurd after Scheppelman withdrew. The Western Slope district includes Montrose, Pueblo, and Grand Junction. Democratic challengers are organizing but the field is still developing. This is a potential pickup opportunity given Hurd's thin 2024 margin and Republican internal divisions.</p>
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.2rem; margin-top: 1rem;">
+    <p class="card-text" style="font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">🎖️ Veterans & Military Note — CD-3</p>
+    <p class="card-text">Incumbent Jeff Hurd (R) represents the Western Slope, which includes some military veteran communities. No military service confirmed for Hurd. Democratic challengers are still organizing — veterans policy positions will be tracked as the field develops.</p>
+  </div>
+<section class="section">
+  <div class="section-label">CONGRESSIONAL — CD-4</div>
+  <h2 class="section-title">CD-4: Eastern Plains / Northern Suburbs</h2>
+  <p class="section-subtitle">R-held district (Lauren Boebert). Democratic challengers TBD.</p>
+  <p class="card-text">R-held district. Incumbent <strong>Lauren Boebert</strong> switched to this district after redistricting and won in 2024. The Eastern Plains/Northern Suburbs district is heavily Republican. Democratic primary candidates include Trisha Calvarese, Eileen Laubacher, John Padora Jr., and Jenna Preston. Boebert has a net-negative favorability even in neighboring CD-5 (per Killin's internal poll), suggesting vulnerability, but this district's partisan lean is significantly more challenging for Democrats.</p>
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.2rem; margin-top: 1rem;">
+    <p class="card-text" style="font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">🎖️ Veterans & Military Note — CD-4</p>
+    <p class="card-text"><strong>Lauren Boebert (R):</strong> No military service. Endorsed Victor Marx (Marine veteran) for governor. Has supported Trump-aligned defense positions. Democratic primary candidates (Calvarese, Laubacher, Padora, Preston) have not yet released specific veterans platforms. The Eastern Plains district includes some agricultural communities with veteran populations.</p>
+  </div>
+<section class="section">
+  <div class="section-label">CONGRESSIONAL — CD-6</div>
+  <h2 class="section-title">CD-6: Eastern Denver Metro</h2>
+  <p class="section-subtitle">Incumbent Jason Crow (running for re-election; endorsed Bennet for governor).</p>
+  <p class="card-text">Incumbent <strong>Jason Crow</strong> was re-elected in 2024 with 59%. Army Ranger veteran, former litigator. Has endorsed Bennet for governor. The Eastern Denver Metro district is solidly Democratic. No major primary challenge expected. Crow was considered for the governor's race but opted to run for re-election.</p>
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.2rem; margin-top: 1rem;">
+    <p class="card-text" style="font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">🎖️ Veterans & Military Policy — Crow</p>
+    <p class="card-text"><strong>Military Service:</strong> U.S. Army Ranger (82nd Airborne, 75th Ranger Regiment). Three combat deployments to Iraq and Afghanistan. Captain. Bronze Star recipient. One of Congress's most prominent veteran-legislators.</p>
+    <p class="card-text" style="margin-top:0.5rem"><strong>Key Record:</strong> Serves on House Armed Services Committee (Ranking Member, Intelligence &amp; Special Operations Subcommittee) and House Intelligence Committee. Voted YES on PACT Act. Introduced five veterans bills (Nov 2025): Veterans' Sentinel Act (suicide prevention), BRAVE Act (mental health), Veterans Earned Education Act (GI Bill expansion for dependents), Veterans with ALS Reporting Act, and criminal justice diversion for veterans. Introduced SMART for TBI Act for traumatic brain injury care. Named Denver's Pro-Bono Lawyer of the Year for helping veterans transition to civilian life. Served on Colorado Board of Veterans Affairs (2009–2014). Part of a Nov 2025 video telling service members they can refuse illegal orders — Trump responded by calling him a traitor. Signed the full CO delegation statement opposing Space Command relocation.</p>
+    <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: crow.house.gov, VoteVets, Wikipedia, GovTrack.us, La Voz Colorado (Nov 2024).</p>
+  </div>
+<section class="section">
+  <div class="section-label">CONGRESSIONAL — CD-7</div>
+  <h2 class="section-title">CD-7: Central Colorado</h2>
+  <p class="section-subtitle">Incumbent Brittany Pettersen.</p>
+  <p class="card-text">Incumbent <strong>Brittany Pettersen</strong> was elected in 2024 with 55.3%. Central Colorado district. No major primary challenge expected. Pettersen has focused on fentanyl crisis legislation and affordable housing during her tenure.</p>
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.2rem; margin-top: 1rem;">
+    <p class="card-text" style="font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">🎖️ Veterans & Military Policy — Pettersen</p>
+    <p class="card-text"><strong>Military Service:</strong> None. <strong>Key Record:</strong> Voted YES on the PACT Act in the House. Central Colorado district includes Jefferson County with proximity to Buckley Space Force Base. Signed the full CO delegation statement opposing Space Command relocation to Alabama. Supports VA funding and military family benefits. Specific veterans policy focus has been secondary to her fentanyl and housing work.</p>
+    <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: pettersen.house.gov, joint delegation statement (Sept 2025).</p>
+  </div>
+<section class="section">
+  <div class="section-label">CONGRESSIONAL — CD-8</div>
+  <h2 class="section-title">CD-8: Northern Suburbs</h2>
+  <p class="section-subtitle">Incumbent Yadira Caraveo faces primary challengers.</p>
+  <p class="card-text">Incumbent <strong>Yadira Caraveo</strong> won this Northern Suburbs swing district in 2024. Colorado's newest congressional district (created after 2020 Census). Caraveo, a pediatrician, has faced primary challengers. Term-limited Treasurer Dave Young is reportedly considering a run in this district. This is one of the more competitive Democratic-held seats in CO, making the primary important for ensuring a strong general election candidate.</p>
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.2rem; margin-top: 1rem;">
+    <p class="card-text" style="font-weight:600; color: var(--gray-300); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem;">🎖️ Veterans & Military Policy — Caraveo</p>
+    <p class="card-text"><strong>Military Service:</strong> None (pediatrician). <strong>Key Record:</strong> Northern Suburbs swing district (CO's newest CD, created after 2020 Census). Voted YES on the PACT Act. Signed the full CO delegation statement opposing Space Command relocation. As a pediatrician, Caraveo has focused on healthcare access that benefits military families. The CD-8 area includes communities near Buckley SFB. Specific veterans-focused legislation from Caraveo is limited given her short tenure.</p>
+    <p class="card-text" style="font-size:0.78rem; color: var(--gray-400); margin-top:0.3rem">Source: caraveo.house.gov, joint delegation statement (Sept 2025).</p>
+  </div>
+<section class="section">
+  <div class="section-label">📚 STATE — BOARD OF EDUCATION</div>
+  <h2 class="section-title">State Board of Education (3 seats)</h2>
+  <div class="comparison-banner">
+    <h3>📚 Why These Seats Matter</h3>
+    <p>The State Board of Education sets statewide education policy, adopts academic standards, and oversees the state education budget. Democrats expanded their majority to 6 seats in 2022, but Republicans recaptured a seat in 2024. Three seats are up in 2026: Districts 1, 5 (currently held by Republican Steve Durham), and 7. Control of the board determines decisions on curriculum standards, school choice policy, and how Colorado responds to federal education mandates.</p>
+  </div>
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+    <p class="card-text">As of March 24, 2026, <strong>no official Democratic candidates</strong> have filed for the three State Board of Education seats up in 2026 according to Ballotpedia. The March 18 filing deadline has passed — candidate lists should be finalized by the Secretary of State's office in the coming weeks. Check <a href="https://www.sos.state.co.us" style="color: var(--sky); text-decoration: none; border-bottom: 1px dashed var(--sky);">sos.state.co.us</a> for updated candidate filings.</p>
+    <p class="card-text" style="margin-top: 0.8rem"><strong>Current Board Composition:</strong> Democrats hold a 5-4 majority. Seats up in 2026 include District 5, currently held by Republican Steve Durham (elected 2014, re-elected 2022). Flipping or defending these seats will determine whether Democrats maintain their education policy agenda.</p>
+    <p class="card-text" style="margin-top: 0.8rem; font-size:0.78rem; color: var(--gray-400)">Source: Ballotpedia, Chalkbeat Colorado. This section will be updated as candidates are confirmed.</p>
+    <p class="card-text" style="margin-top: 0.8rem; font-size:0.8rem; color: var(--gray-300);">🎖️ <em>Veterans relevance: The Board of Education sets standards for schools serving military-connected children at Fort Carson, Peterson SFB, Schriever SFB, USAFA, and Buckley SFB communities. District 5 (Steve Durham\'s seat) covers El Paso County — one of Colorado\'s most military-dense regions. Veterans policy positions will be tracked when candidates are confirmed.</em></p>
+  </div>
+<section class="section">
+  <div class="section-label">🎓 STATE — CU BOARD OF REGENTS</div>
+  <h2 class="section-title">CU Board of Regents (3 seats)</h2>
+  <div class="comparison-banner">
+    <h3>🎓 Why These Seats Matter</h3>
+    <p>The CU Board of Regents governs the University of Colorado system (Boulder, Denver, Colorado Springs, Anschutz). The 9-member elected board sets tuition, hires the university president, and oversees a $5B+ budget. Three seats are up in 2026: Districts 2, 4, and 6. Note: Wanda James, who currently holds the District 1 At-Large Regent seat, is running for Congress in CD-1 instead of seeking re-election.</p>
+  </div>
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem;">
+    <p class="card-text">As of March 24, 2026, candidate filings are still being finalized. <strong>Donald Comstock</strong> is the only confirmed candidate for the District 2 general election. No official Democratic primary candidates have been confirmed by Ballotpedia for the other two seats. Check <a href="https://www.sos.state.co.us" style="color: var(--sky); text-decoration: none; border-bottom: 1px dashed var(--sky);">sos.state.co.us</a> for updated candidate filings as the Secretary of State processes March 18 petitions.</p>
+    <p class="card-text" style="margin-top: 0.8rem"><strong>Context:</strong> Regent races are often overlooked but have significant impact on higher education affordability, research priorities, and campus policy. In 2024, Democrats held a narrow majority on the board.</p>
+    <p class="card-text" style="margin-top: 0.8rem; font-size:0.78rem; color: var(--gray-400)">Source: Ballotpedia, Wikipedia. This section will be updated as candidates are confirmed.</p>
+    <p class="card-text" style="margin-top: 0.8rem; font-size:0.8rem; color: var(--gray-300);">🎖️ <em>Veterans relevance: CU Colorado Springs (UCCS) is adjacent to Fort Carson and serves a large military/veteran student population using GI Bill benefits. Regent decisions on tuition, veteran student services, and the UCCS campus directly affect military families. CU\'s Anschutz Medical Campus conducts VA-affiliated research. Veterans policy positions will be tracked when candidates are confirmed.</em></p>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; text-align: left;">
+    <p style="font-size: 0.85rem; color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.6rem;">⚠️ Important Disclosures</p>
+    <p style="font-size: 0.85rem; color: var(--gray-200); margin-bottom: 0.8rem;">This is a <strong>student-led, independent project</strong> and is <strong>not affiliated with, endorsed by, or authorized by any candidate, campaign, political party, or official organization</strong>. The views and information presented here are compiled for educational and civic engagement purposes only.</p>
+    <p style="font-size: 0.85rem; color: var(--gray-200); margin-bottom: 0.8rem;"><strong>This guide was created with the assistance of artificial intelligence and may contain inaccurate statements.</strong> While every effort has been made to verify information against publicly available sources, AI-generated content can include errors, omissions, or outdated information. Readers are encouraged to independently verify all claims before relying on them for voting decisions.</p>
+    <p style="font-size: 0.85rem; color: var(--gray-200);"><strong>To report inaccuracies:</strong> Send inquiries to <a href="/cdn-cgi/l/email-protection#1b6f737e78747774697a7f746d746f7e697c6e727f7e5b7c767a727735787476" style="color: var(--sky); text-decoration: none; border-bottom: 1px solid var(--sky);"><span class="__cf_email__" data-cfemail="74001c11171b181b0615101b021b00110613011d1011341319151d185a171b19">[email&#160;protected]</span></a> and please include a publicly verifiable source for the correction.</p>
+  </div>
+  <p style="margin-bottom: 0.5rem"><strong>Sources:</strong> FEC filings, Colorado Secretary of State (TRACER), GovTrack.us, Ballotpedia, Colorado General Assembly, Colorado Newsline, Colorado Politics, CPR News, Denver Post, 9News, Axios Denver, candidate campaign websites.</p>
+  <p style="margin-bottom: 1rem">All data sourced as of March 24, 2026.</p>
+  <p>Built for Colorado voters. 🏔️</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleCollapsible(trigger) {
+  trigger.classList.toggle('open');
+  const content = trigger.nextElementSibling;
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+  } else {
+    content.style.maxHeight = content.scrollHeight + 'px';
+  }
+}
+
+// Sticky nav active state
+const navLinks = document.querySelectorAll('.race-nav a');
+const sections = document.querySelectorAll('div[id]');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// Smooth scroll
+navLinks.forEach(link => 
